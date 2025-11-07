@@ -1,0 +1,103 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "name": "Agroservicio Los Andes",
+      "address": "Calle Principal, Sector Centro, Juan José Mora",
+      "phone": "+58 424-123-4567",
+      "website": "https://agroserviciosandes.com",
+      "image": "images/agroservicio-andes.jpg",
+      "membershipLevel": 3,
+      "category": "Agroindustria",
+      "description": "Distribución de insumos agrícolas y asesoría técnica para productores locales"
+    },
+    {
+      "id": 2,
+      "name": "Panadería y Pastelería El Trigal",
+      "address": "Av. Bolívar #45, Juan José Mora",
+      "phone": "+58 424-234-5678",
+      "website": "https://panaderiaeltrigal.com",
+      "image": "images/panaderia-trigal.jpg",
+      "membershipLevel": 2,
+      "category": "Alimentos y Bebidas",
+      "description": "Productos de panadería artesanal y repostería desde 1985"
+    },
+    {
+      "id": 3,
+      "name": "Ferretería Industrial La Tuerca",
+      "address": "Carrera 3 con Calle 8, Zona Industrial",
+      "phone": "+58 424-345-6789",
+      "website": "https://ferreteriatuerca.com",
+      "image": "images/ferreteria-tuerca.jpg",
+      "membershipLevel": 3,
+      "category": "Construcción y Ferretería",
+      "description": "Herramientas, materiales de construcción y equipos industriales"
+    },
+    {
+      "id": 4,
+      "name": "Clínica Médica San Rafael",
+      "address": "Calle 5 #12-34, Centro Médico Plaza",
+      "phone": "+58 424-456-7890",
+      "website": "https://clinicasanrafael.com",
+      "image": "images/clinica-sanrafael.jpg",
+      "membershipLevel": 3,
+      "category": "Salud y Bienestar",
+      "description": "Atención médica integral con especialistas y servicios de emergencia 24/7"
+    },
+    {
+      "id": 5,
+      "name": "Supermercado La Economía",
+      "address": "Av. Principal #78, Sector La Paz",
+      "phone": "+58 424-567-8901",
+      "website": "https://supermercadolaeconomia.com",
+      "image": "images/super-economia.jpg",
+      "membershipLevel": 2,
+      "category": "Comercio y Retail",
+      "description": "Supermercado familiar con productos frescos y precios competitivos"
+    },
+    {
+      "id": 6,
+      "name": "Tech Solutions Mora",
+      "address": "Centro Comercial Los Próceres, Local 45",
+      "phone": "+58 424-678-9012",
+      "website": "https://techsolutionsmora.com",
+      "image": "images/tech-solutions.jpg",
+      "membershipLevel": 2,
+      "category": "Tecnología",
+      "description": "Servicios de tecnología, reparación de equipos y desarrollo de software"
+    },
+    {
+      "id": 7,
+      "name": "Hotel y Posada El Mirador",
+      "address": "Km 2 Carretera Nacional, Vía Turística",
+      "phone": "+58 424-789-0123",
+      "website": "https://hotelelmirador.com",
+      "image": "images/hotel-mirador.jpg",
+      "membershipLevel": 3,
+      "category": "Turismo y Hospitalidad",
+      "description": "Alojamiento confortable con vista panorámica y servicios de restaurante"
+    },
+    {
+      "id": 8,
+      "name": "Cooperativa de Transporte Unidos",
+      "address": "Terminal de Pasajeros, Zona Norte",
+      "phone": "+58 424-890-1234",
+      "website": "https://transporteunidos.com",
+      "image": "images/transporte-unidos.jpg",
+      "membershipLevel": 1,
+      "category": "Transporte y Logística",
+      "description": "Servicios de transporte público local e intermunicipal"
+    },
+    {
+      "id": 9,
+      "name": "Escuela de Oficios San José",
+      "address": "Calle 10 #23-45, Sector Educativo",
+      "phone": "+58 424-901-2345",
+      "website": "https://escuelaoficiossj.com",
+      "image": "images/escuela-oficios.jpg",
+      "membershipLevel": 1,
+      "category": "Educación y Formación",
+      "description": "Capacitación técnica en oficios para el desarrollo profesional comunitario"
+    }
+  ]
+}
