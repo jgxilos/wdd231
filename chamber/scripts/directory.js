@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializar funcionalidades
     initFooterDates();
     initMobileMenu();
+    initThemeToggle();
     initViewToggle();
     loadMembers();
 });
@@ -66,6 +67,28 @@ function initMobileMenu() {
                 mainNav.classList.remove('active');
             });
         });
+    }
+}
+
+// ========================================
+// TOGGLE TEMA OSCURO/CLARO
+// ========================================
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            // Guardar preferencia (opcional)
+            const isDark = document.body.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+        
+        // Cargar preferencia guardada (opcional)
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
     }
 }
 
