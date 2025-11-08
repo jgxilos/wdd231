@@ -1,8 +1,8 @@
 /* ========================================
-   CSS VARIABLES AND GLOBAL CONFIGURATION
+   VARIABLES CSS AND GLOBAL CONFIGURATION
    ======================================== */
 :root {
-    /* Color palette according to wireframe */
+    /* Paleta de colores según wireframe */
     --primary-color: #2c3e50;
     --secondary-color: #7f8c8d;
     --accent-color: #95a5a6;
@@ -12,23 +12,23 @@
     --text-light: #7f8c8d;
     --border-color: #bdc3c7;
     
-    /* Typography */
+    /* Tipografía */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
     
-    /* Spacing */
+    /* Espaciado */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     
-    /* Transitions */
+    /* Transiciones */
     --transition: all 0.3s ease;
 }
 
 /* ========================================
-   BASIC STYLES
+   BASE STYLES
    ======================================== */
 * {
     margin: 0;
@@ -92,34 +92,7 @@ header {
     font-weight: 600;
 }
 
-/* Toggle dark theme */
-.theme-toggle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--background-white);
-    border: 2px solid var(--border-color);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-    position: relative;
-}
-
-.theme-icon {
-    width: 20px;
-    height: 20px;
-    background: linear-gradient(90deg, var(--text-dark) 50%, transparent 50%);
-    border-radius: 50%;
-    border: 2px solid var(--text-dark);
-}
-
-.theme-toggle:hover {
-    transform: scale(1.1);
-}
-
-/* Hamburger menu button */
+/* Mobile hamburger menu button */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -150,7 +123,7 @@ header {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Navegación */
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
@@ -170,6 +143,38 @@ nav a:hover,
 nav a.active {
     background-color: var(--accent-color);
     color: var(--background-white);
+}
+
+/* Dark/Light theme toggle - positioned at the end */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--background-white);
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(90deg, var(--text-dark) 50%, transparent 50%);
+    border-radius: 50%;
+    border: 2px solid var(--text-dark);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
 }
 
 /* ========================================
@@ -237,7 +242,194 @@ nav a.active {
 }
 
 /* ========================================
-   DISPLAY CONTROLS
+   INFO GRID - EVENTS, WEATHER, FORECAST
+   ======================================== */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.info-card {
+    background-color: var(--background-white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.info-card h2 {
+    background-color: var(--primary-color);
+    color: var(--background-white);
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin: 0;
+}
+
+/* Events Card */
+.events-card {
+    padding-bottom: var(--spacing-md);
+}
+
+.event-item {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.event-item:last-child {
+    border-bottom: none;
+}
+
+.event-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.event-date {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.event-item p:last-child {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Weather Card */
+.weather-current {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.weather-icon {
+    margin-bottom: var(--spacing-sm);
+}
+
+.weather-info p {
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.temperature {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: var(--text-dark) !important;
+    margin-bottom: var(--spacing-xs) !important;
+}
+
+.condition {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    color: var(--text-dark) !important;
+    margin-bottom: var(--spacing-sm) !important;
+}
+
+/* Weather Forecast Card */
+.forecast-item {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forecast-item:last-child {
+    border-bottom: none;
+}
+
+.forecast-day {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.forecast-temp {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+/* ========================================
+   BUSINESS SPOTLIGHTS
+   ======================================== */
+.spotlights-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    padding: 0 var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.spotlight-card {
+    background-color: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    text-align: center;
+}
+
+.spotlight-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.business-tagline {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.business-image-placeholder {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, #e0e0e0 25%, transparent 25%) -25px 0,
+                linear-gradient(225deg, #e0e0e0 25%, transparent 25%) -25px 0,
+                linear-gradient(315deg, #e0e0e0 25%, transparent 25%),
+                linear-gradient(45deg, #e0e0e0 25%, transparent 25%);
+    background-size: 50px 50px;
+    background-color: #d5d5d5;
+    border: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.business-contact {
+    text-align: left;
+}
+
+.business-contact p {
+    font-size: 0.875rem;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+/* ========================================
+   SECTION TITLE FOR DIRECTORY
+   ======================================== */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
+    text-align: center;
+}
+
+/* ========================================
+   VIEW CONTROLS
    ======================================== */
 .view-controls {
     display: flex;
@@ -280,7 +472,7 @@ nav a.active {
 }
 
 /* ========================================
-   MEMBER CONTAINER - GRID VIEW
+   MEMBERS CONTAINER - GRID VIEW
    ======================================== */
 .members-grid {
     display: grid;
@@ -365,7 +557,7 @@ nav a.active {
 }
 
 /* ========================================
-   MEMBER CONTAINER - LIST VIEW
+   MEMBERS CONTAINER - LIST VIEW
    ======================================== */
 .members-list {
     display: flex;
@@ -450,18 +642,20 @@ footer {
 }
 
 .social-icon {
-    color: var(--secondary-color);
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-icon:hover {
-    color: var(--primary-color);
     transform: scale(1.1);
 }
 
-.social-icon svg {
+.social-icon img {
     width: 50px;
     height: 50px;
+    display: block;
 }
 
 /* Project information (right) */
@@ -504,6 +698,16 @@ footer {
         text-align: center;
     }
     
+    /* Info grid becomes 1 column on tablet */
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Spotlights become 1 column on tablet */
+    .spotlights-section {
+        grid-template-columns: 1fr;
+    }
+    
     .members-grid {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
@@ -524,11 +728,16 @@ footer {
     }
 }
 
-/* Cell phones */
+/* Mobile */
 @media (max-width: 640px) {
-    /* Header responsive */
+    /* Responsive header */
     .header-container {
         flex-wrap: wrap;
+        position: relative;
+    }
+    
+    .logo {
+        flex: 1;
     }
     
     .logo span {
@@ -537,11 +746,11 @@ footer {
     
     .menu-toggle {
         display: flex;
-        order: 3;
+        order: 2;
     }
     
     .theme-toggle {
-        order: 2;
+        order: 3;
     }
     
     nav {
@@ -566,7 +775,7 @@ footer {
         border-bottom: 1px solid var(--border-color);
     }
     
-    /* Hero responsive */
+    /* Responsive hero */
     .hero-image {
         height: 200px;
     }
@@ -584,18 +793,34 @@ footer {
         margin: var(--spacing-md);
     }
     
-    /* Grid responsive */
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    /* Info grid mobile */
+    .info-grid {
+        grid-template-columns: 1fr;
+        padding: var(--spacing-sm);
+    }
+    
+    /* Spotlights mobile */
+    .spotlights-section {
+        grid-template-columns: 1fr;
+        padding: var(--spacing-sm);
+    }
+    
+    /* Responsive grid */
     .members-grid {
         grid-template-columns: 1fr;
         padding: var(--spacing-sm);
     }
     
-    /* Footer responsive */
+    /* Responsive footer */
     .footer-social {
         flex-wrap: wrap;
     }
     
-    .social-icon svg {
+    .social-icon img {
         width: 40px;
         height: 40px;
     }

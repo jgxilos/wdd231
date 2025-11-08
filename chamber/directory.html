@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Directorio oficial de empresas miembros de la Cámara de Comercio del Municipio Juan José Mora. Encuentra negocios locales, servicios y oportunidades de networking.">
-    <meta name="author" content="Jernigam Godenvoy Gonzalez Rivero">
+    <meta name="author" content="Tu Nombre Completo">
     
     <!-- Open Graph Meta Tags para Facebook -->
-    <meta property="og:title" content="Business Directory - Juan José Mora Chamber of Commerce">
+    <meta property="og:title" content="Directorio de Empresas - Cámara de Comercio Juan José Mora">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://tuusuario.github.io/wdd231/chamber/images/og-image.jpg">
-    <meta property="og:url" content="https://jgxilos.github.io/wdd231/chamber/directory.html">
-    <meta property="og:description" content="Discover the member companies of our chamber of commerce and connect with the local business community..">
+    <meta property="og:url" content="https://tuusuario.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Descubre las empresas miembros de nuestra cámara de comercio y conecta con la comunidad empresarial local.">
     
-    <title>Member Directory | Juan José Mora Chamber of Commerce</title>
+    <title>Directorio de Miembros | Cámara de Comercio Juan José Mora</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="styles/directory.css">
 </head>
 <body>
-
+    <!-- Header simplified according to wireframe -->
     <header>
         <div class="header-container">
             <div class="logo">
@@ -36,15 +36,10 @@
                     <rect x="2" y="2" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2"/>
                     <path d="M10 20L20 12L30 20M12 22V30H18V24H22V30H28V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span>Juan José Mora Chamber of Commerce</span>
+                <span>Cámara de Comercio Juan José Mora</span>
             </div>
             
-            <!-- Toggle dark/light theme -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Change topic">
-                <div class="theme-icon"></div>
-            </button>
-            
-            <!-- Hamburger menu button -->
+            <!-- Mobile hamburger menu button -->
             <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
                 <span></span>
                 <span></span>
@@ -59,6 +54,11 @@
                     <li><a href="discover.html">Discover</a></li>
                 </ul>
             </nav>
+            
+            <!-- Dark/Light theme toggle (positioned after nav) -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+                <div class="theme-icon"></div>
+            </button>
         </div>
     </header>
 
@@ -73,9 +73,117 @@
         </section>
 
         <!-- Page title -->
-        <h1 class="page-title">Member Directory</h1>
+        <h1 class="page-title">Home</h1>
 
-        <!-- Display controls -->
+        <!-- Three-column container: Events, Current Weather, Weather Forecast -->
+        <section class="info-grid">
+            <!-- Events Section -->
+            <div class="info-card events-card">
+                <h2>Events</h2>
+                <div class="event-item">
+                    <h3>Annual Business Networking Gala</h3>
+                    <p class="event-date">December 15, 2025 | 7:00 PM</p>
+                    <p>Join us for an evening of networking with local business leaders and entrepreneurs. Featuring keynote speaker Maria Rodriguez.</p>
+                </div>
+                <div class="event-item">
+                    <h3>Small Business Workshop</h3>
+                    <p class="event-date">December 20, 2025 | 2:00 PM</p>
+                    <p>Learn essential digital marketing strategies for small businesses. Free for chamber members.</p>
+                </div>
+                <div class="event-item">
+                    <h3>Holiday Market Fair</h3>
+                    <p class="event-date">December 22-24, 2025</p>
+                    <p>Support local vendors at our annual holiday market in the town square.</p>
+                </div>
+            </div>
+
+            <!-- Current Weather Section -->
+            <div class="info-card weather-card">
+                <h2>Current Weather</h2>
+                <div class="weather-current">
+                    <div class="weather-icon">
+                        <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Sun -->
+                            <circle cx="50" cy="35" r="15" fill="#FDB813"/>
+                            <line x1="50" y1="10" x2="50" y2="20" stroke="#FDB813" stroke-width="3"/>
+                            <line x1="70" y1="15" x2="65" y2="20" stroke="#FDB813" stroke-width="3"/>
+                            <line x1="80" y1="35" x2="70" y2="35" stroke="#FDB813" stroke-width="3"/>
+                            <line x1="30" y1="15" x2="35" y2="20" stroke="#FDB813" stroke-width="3"/>
+                            <line x1="20" y1="35" x2="30" y2="35" stroke="#FDB813" stroke-width="3"/>
+                            <!-- Cloud -->
+                            <ellipse cx="40" cy="60" rx="15" ry="12" fill="#E0E0E0"/>
+                            <ellipse cx="55" cy="65" rx="20" ry="15" fill="#E0E0E0"/>
+                            <ellipse cx="65" cy="60" rx="12" ry="10" fill="#E0E0E0"/>
+                        </svg>
+                    </div>
+                    <div class="weather-info">
+                        <p class="temperature">75°F</p>
+                        <p class="condition">Partly Cloudy</p>
+                        <p>High: 85°</p>
+                        <p>Low: 52°</p>
+                        <p>Humidity: 34%</p>
+                        <p>Sunrise: 7:30am</p>
+                        <p>Sunset: 9:59pm</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weather Forecast Section -->
+            <div class="info-card forecast-card">
+                <h2>Weather Forecast</h2>
+                <div class="forecast-item">
+                    <p class="forecast-day">Today:</p>
+                    <p class="forecast-temp">90°F</p>
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-day">Wednesday:</p>
+                    <p class="forecast-temp">89°F</p>
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-day">Thursday:</p>
+                    <p class="forecast-temp">68°F</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Spotlights (3 cards) -->
+        <section class="spotlights-section">
+            <div class="spotlight-card">
+                <h3>Business Name</h3>
+                <p class="business-tagline">Business Tag Line</p>
+                <div class="business-image-placeholder"></div>
+                <div class="business-contact">
+                    <p><strong>EMAIL:</strong> info@gmail.com</p>
+                    <p><strong>PHONE:</strong> 800-555-1234</p>
+                    <p><strong>URL:</strong> mybusiness.com</p>
+                </div>
+            </div>
+            <div class="spotlight-card">
+                <h3>Business Name</h3>
+                <p class="business-tagline">Business Tag Line</p>
+                <div class="business-image-placeholder"></div>
+                <div class="business-contact">
+                    <p><strong>EMAIL:</strong> info@gmail.com</p>
+                    <p><strong>PHONE:</strong> 800-555-1234</p>
+                    <p><strong>URL:</strong> mybusiness.com</p>
+                </div>
+            </div>
+            <div class="spotlight-card">
+                <h3>Business Name</h3>
+                <p class="business-tagline">Business Tag Line</p>
+                <div class="business-image-placeholder"></div>
+                <div class="business-contact">
+                    <p><strong>EMAIL:</strong> info@gmail.com</p>
+                    <p><strong>PHONE:</strong> 800-555-1234</p>
+                    <p><strong>URL:</strong> mybusiness.com</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Directory section title -->
+        <h2 class="section-title">Member Directory</h2>
+
+        <!-- View controls -->
         <div class="view-controls">
             <button id="gridBtn" class="view-btn active" aria-label="Grid view">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -85,7 +193,7 @@
                     <rect x="3" y="14" width="7" height="7"></rect>
                 </svg>
             </button>
-            <button id="listBtn" class="view-btn" aria-label="Vista de lista">
+            <button id="listBtn" class="view-btn" aria-label="List view">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <line x1="8" y1="6" x2="21" y2="6"></line>
                     <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -97,19 +205,19 @@
             </button>
         </div>
 
-        <!-- Member container -->
+        <!-- Members container -->
         <div id="membersContainer" class="members-grid">
             <!-- Members will be loaded dynamically here -->
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer according to wireframe -->
     <footer>
         <div class="footer-container">
-
+            <!-- Contact information (left) -->
             <div class="footer-contact">
-                <h3>Juan José Mora Chamber of Commerce</h3>
-                <p>Main Street #123</p>
+                <h3>Cámara de Comercio Juan José Mora</h3>
+                <p>10 Rue De La Paix</p>
                 <p>Juan José Mora, Venezuela</p>
                 <p>info@camarajjmora.org</p>
                 <p>(+58) 424-XXX-XXXX</p>
@@ -117,32 +225,23 @@
             
             <!-- Social media icons (center) -->
             <div class="footer-social">
-                <a href="#" aria-label="YouTube" class="social-icon">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="currentColor">
-                        <circle cx="25" cy="25" r="23"/>
-                        <path d="M20 18L32 25L20 32V18Z" fill="white"/>
-                    </svg>
+                <a href="#" aria-label="Facebook" class="social-icon">
+                    <img src="images/facebook.svg" alt="Facebook" width="50" height="50">
                 </a>
                 <a href="#" aria-label="Twitter" class="social-icon">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="currentColor">
-                        <circle cx="25" cy="25" r="23"/>
-                        <path d="M35 18c-1 1-2 1-3 1 1-1 2-2 2-4-1 1-3 2-4 2-1-1-3-2-5-2-4 0-7 3-7 7 0 0 0 1 0 1-5 0-10-3-13-7-1 1-1 2-1 3 0 3 1 5 3 6-1 0-2 0-3-1 0 3 2 6 5 7h-2c0 3 3 5 6 5-2 2-5 3-8 3h-1c3 2 6 3 10 3 11 0 17-9 17-17v-1c1-1 2-2 3-3z" fill="white"/>
-                    </svg>
+                    <img src="images/twitter.svg" alt="Twitter" width="50" height="50">
                 </a>
                 <a href="#" aria-label="LinkedIn" class="social-icon">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="currentColor">
-                        <circle cx="25" cy="25" r="23"/>
-                        <path d="M18 21h4v13h-4V21zm2-6c1 0 2 1 2 2s-1 2-2 2-2-1-2-2 1-2 2-2zm6 6h4v2c1-1 2-2 4-2 4 0 5 3 5 6v7h-4v-6c0-1 0-3-2-3s-3 2-3 3v6h-4V21z" fill="white"/>
-                    </svg>
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="50" height="50">
                 </a>
             </div>
             
             <!-- Project information (right) -->
             <div class="footer-info">
                 <p><strong>WDD231 Class Project</strong></p>
-                <p>Jernigam Gonzalez</p>
-                <p>&copy; <span id="currentYear"></span> Juan José Mora Chamber of Commerce</p>
-                <p>Última modificación: <span id="lastModified"></span></p>
+                <p>Your Full Name</p>
+                <p>&copy; <span id="currentYear"></span> Cámara de Comercio Juan José Mora</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
             </div>
         </div>
     </footer>

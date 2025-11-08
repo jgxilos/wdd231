@@ -13,7 +13,7 @@ let currentView = 'grid'; // 'grid' o 'list'
 // MAIN INITIALIZATION FUNCTION
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize features
+    // Initialize functionalities
     initFooterDates();
     initMobileMenu();
     initThemeToggle();
@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
 // FOOTER: DYNAMIC DATES
 // ========================================
 function initFooterDates() {
-    // Set the current year in the copyright
+    // Set current year in copyright
     const currentYearSpan = document.getElementById('currentYear');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
     }
     
-    // Set the date of last modification
+    // Set last modification date
     const lastModifiedSpan = document.getElementById('lastModified');
     if (lastModifiedSpan) {
         const lastModified = new Date(document.lastModified);
@@ -42,7 +42,7 @@ function initFooterDates() {
             hour: '2-digit',
             minute: '2-digit'
         };
-        lastModifiedSpan.textContent = lastModified.toLocaleDateString('es-ES', options);
+        lastModifiedSpan.textContent = lastModified.toLocaleDateString('en-US', options);
     }
 }
 
@@ -71,7 +71,7 @@ function initMobileMenu() {
 }
 
 // ========================================
-// Toggle Dark/Light Theme
+// DARK/LIGHT THEME TOGGLE
 // ========================================
 function initThemeToggle() {
     const themeToggle = document.getElementById('themeToggle');
@@ -79,21 +79,29 @@ function initThemeToggle() {
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
-            // Save preference (optional)
+            // Save preference (optional - can be removed if localStorage not desired)
             const isDark = document.body.classList.contains('dark-theme');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            try {
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            } catch (e) {
+                console.log('localStorage not available');
+            }
         });
         
-        // Load saved preference (optional)
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-theme');
+        // Load saved preference (optional - can be removed if localStorage not desired)
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        } catch (e) {
+            console.log('localStorage not available');
         }
     }
 }
 
 // ========================================
-// Toggle between grid view and list view
+// TOGGLE BETWEEN GRID AND LIST VIEW
 // ========================================
 function initViewToggle() {
     const gridBtn = document.getElementById('gridBtn');
@@ -116,7 +124,7 @@ function setView(view) {
     const gridBtn = document.getElementById('gridBtn');
     const listBtn = document.getElementById('listBtn');
     
-    // Actualizar clases de botones
+    // Update button classes
     if (view === 'grid') {
         gridBtn.classList.add('active');
         listBtn.classList.remove('active');
@@ -127,19 +135,19 @@ function setView(view) {
         container.className = 'members-list';
     }
     
-    // Re-render members with the new view
+    // Re-render members with new view
     displayMembers(membersData);
 }
 
 // ========================================
-// LOADING JSON DATA (ASYNC/AWAIT)
+// LOAD JSON DATA (ASYNC/AWAIT)
 // ========================================
 async function loadMembers() {
     const container = document.getElementById('membersContainer');
     
     try {
-        // Show charge indicator
-        container.innerHTML = '<p style="text-align: center; padding: 2rem; color: #64748b;">Cargando miembros...</p>';
+        // Show loading indicator
+        container.innerHTML = '<p style="text-align: center; padding: 2rem; color: #64748b;">Loading members...</p>';
         
         // Fetch data with async/await
         const response = await fetch('data/members.json');
@@ -149,32 +157,32 @@ async function loadMembers() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         
-        // Parsear JSON
+        // Parse JSON
         const data = await response.json();
         membersData = data.members;
         
         // Validate data
         if (!membersData || membersData.length === 0) {
-            throw new Error('No se encontraron datos de miembros');
+            throw new Error('No member data found');
         }
         
-        // Show members
+        // Display members
         displayMembers(membersData);
         
     } catch (error) {
-        console.error('Error al cargar los miembros:', error);
+        console.error('Error loading members:', error);
         container.innerHTML = `
             <div style="text-align: center; padding: 2rem; color: #ef4444;">
-                <p style="font-weight: 600; margin-bottom: 0.5rem;">Error al cargar los miembros</p>
+                <p style="font-weight: 600; margin-bottom: 0.5rem;">Error loading members</p>
                 <p style="font-size: 0.875rem;">${error.message}</p>
-                <p style="font-size: 0.875rem; margin-top: 0.5rem;">Por favor, intenta recargar la página.</p>
+                <p style="font-size: 0.875rem; margin-top: 0.5rem;">Please try reloading the page.</p>
             </div>
         `;
     }
 }
 
 // ========================================
-// MEMBER DISPLAY
+// DISPLAY MEMBERS
 // ========================================
 function displayMembers(members) {
     const container = document.getElementById('membersContainer');
@@ -201,7 +209,7 @@ function displayGridView(members, container) {
         const badgeText = getMembershipBadgeText(member.membershipLevel);
         
         card.innerHTML = `
-            <img src="${member.image}" alt="Logo de ${member.name}" loading="lazy">
+            <img src="${member.image}" alt="Logo of ${member.name}" loading="lazy">
             <div class="member-info">
                 <h3>${member.name}</h3>
                 <span class="membership-badge ${badgeClass}">${badgeText}</span>
@@ -218,7 +226,7 @@ function displayGridView(members, container) {
 }
 
 // ========================================
-// VIEW LIST (LINES)
+// LIST VIEW (LINES)
 // ========================================
 function displayListView(members, container) {
     container.innerHTML = '';
@@ -244,7 +252,7 @@ function displayListView(members, container) {
 }
 
 // ========================================
-// BENEFITS: MEMBERSHIP BADGES
+// UTILITIES: MEMBERSHIP BADGES
 // ========================================
 function getMembershipBadgeClass(level) {
     switch(level) {
@@ -274,11 +282,11 @@ function getMembershipBadgeText(level) {
 // GLOBAL ERROR HANDLING (OPTIONAL)
 // ========================================
 window.addEventListener('error', (event) => {
-    console.error('Error global capturado:', event.error);
+    console.error('Global error caught:', event.error);
 });
 
 // ========================================
 // INFORMATION LOG (DEVELOPMENT)
 // ========================================
-console.log('🎯 Directory.js cargado correctamente');
-console.log('📊 Vista actual:', currentView);
+console.log('🎯 Directory.js loaded successfully');
+console.log('📊 Current view:', currentView);
