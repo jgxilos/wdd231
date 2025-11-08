@@ -3,101 +3,101 @@
     {
       "id": 1,
       "name": "Agroservicio Los Andes",
-      "address": "Calle Principal, Sector Centro, Juan José Mora",
+      "address": "Main Street, Downtown Area, Juan José Mora",
       "phone": "+58 424-123-4567",
       "website": "https://agroserviciosandes.com",
-      "image": "images/agroservicio-andes.jpg",
+      "image": "images/agroservicio-andes.webp",
       "membershipLevel": 3,
-      "category": "Agroindustria",
-      "description": "Distribución de insumos agrícolas y asesoría técnica para productores locales"
+      "category": "Agribusiness",
+      "description": "Distribution of agricultural supplies and technical advice for local producers"
     },
     {
       "id": 2,
       "name": "Panadería y Pastelería El Trigal",
-      "address": "Av. Bolívar #45, Juan José Mora",
+      "address": "45 Bolívar Avenue, Juan José Mora",
       "phone": "+58 424-234-5678",
       "website": "https://panaderiaeltrigal.com",
-      "image": "images/panaderia-trigal.jpg",
+      "image": "images/panaderia-trigal.webp",
       "membershipLevel": 2,
-      "category": "Alimentos y Bebidas",
-      "description": "Productos de panadería artesanal y repostería desde 1985"
+      "category": "Food and Beverages",
+      "description": "Artisanal baked goods and pastries since 1985"
     },
     {
       "id": 3,
       "name": "Ferretería Industrial La Tuerca",
-      "address": "Carrera 3 con Calle 8, Zona Industrial",
+      "address": "Carrera 3 and Calle 8, Industrial Zone",
       "phone": "+58 424-345-6789",
       "website": "https://ferreteriatuerca.com",
-      "image": "images/ferreteria-tuerca.jpg",
+      "image": "images/ferreteria-tuerca.webp",
       "membershipLevel": 3,
-      "category": "Construcción y Ferretería",
-      "description": "Herramientas, materiales de construcción y equipos industriales"
+      "category": "Construction and Hardware",
+      "description": "Tools, building materials, and industrial equipment for construction projects"
     },
     {
       "id": 4,
       "name": "Clínica Médica San Rafael",
-      "address": "Calle 5 #12-34, Centro Médico Plaza",
+      "address": "5th Street #12-34, Plaza Medical Center",
       "phone": "+58 424-456-7890",
       "website": "https://clinicasanrafael.com",
-      "image": "images/clinica-sanrafael.jpg",
+      "image": "images/clinica-sanrafael.webp",
       "membershipLevel": 3,
-      "category": "Salud y Bienestar",
-      "description": "Atención médica integral con especialistas y servicios de emergencia 24/7"
+      "category": "Health and Wellness",
+      "description": "Comprehensive medical care with specialists and 24/7 emergency services"
     },
     {
       "id": 5,
       "name": "Supermercado La Economía",
-      "address": "Av. Principal #78, Sector La Paz",
+      "address": "Main Avenue #78, La Paz Sector",
       "phone": "+58 424-567-8901",
       "website": "https://supermercadolaeconomia.com",
-      "image": "images/super-economia.jpg",
+      "image": "images/super-economia.webp",
       "membershipLevel": 2,
-      "category": "Comercio y Retail",
-      "description": "Supermercado familiar con productos frescos y precios competitivos"
+      "category": "Commerce and Retail",
+      "description": "Family-owned supermarket with fresh products and competitive prices"
     },
     {
       "id": 6,
       "name": "Tech Solutions Mora",
-      "address": "Centro Comercial Los Próceres, Local 45",
+      "address": "Los Próceres Shopping Center, Store 45",
       "phone": "+58 424-678-9012",
       "website": "https://techsolutionsmora.com",
-      "image": "images/tech-solutions.jpg",
+      "image": "images/tech-solutions.webp",
       "membershipLevel": 2,
-      "category": "Tecnología",
-      "description": "Servicios de tecnología, reparación de equipos y desarrollo de software"
+      "category": "Technology",
+      "description": "Technology services, equipment repair, and software development"
     },
     {
       "id": 7,
       "name": "Hotel y Posada El Mirador",
-      "address": "Km 2 Carretera Nacional, Vía Turística",
+      "address": "Km 2 National Highway, Tourist Route",
       "phone": "+58 424-789-0123",
       "website": "https://hotelelmirador.com",
-      "image": "images/hotel-mirador.jpg",
+      "image": "images/hotel-mirador.webp",
       "membershipLevel": 3,
-      "category": "Turismo y Hospitalidad",
-      "description": "Alojamiento confortable con vista panorámica y servicios de restaurante"
+      "category": "Tourism and Hospitality",
+      "description": "Comfortable accommodation with panoramic views and restaurant services"
     },
     {
       "id": 8,
       "name": "Cooperativa de Transporte Unidos",
-      "address": "Terminal de Pasajeros, Zona Norte",
+      "address": "Passenger Terminal, North Zone",
       "phone": "+58 424-890-1234",
       "website": "https://transporteunidos.com",
-      "image": "images/transporte-unidos.jpg",
+      "image": "images/transporte-unidos.webp",
       "membershipLevel": 1,
-      "category": "Transporte y Logística",
-      "description": "Servicios de transporte público local e intermunicipal"
+      "category": "Transportation and Logistics",
+      "description": "Local and intermunicipal public transportation services"
     },
     {
       "id": 9,
       "name": "Escuela de Oficios San José",
-      "address": "Calle 10 #23-45, Sector Educativo",
+      "address": "10th Street #23-45, Education Sector",
       "phone": "+58 424-901-2345",
       "website": "https://escuelaoficiossj.com",
-      "image": "images/escuela-oficios.jpg",
+      "image": "images/escuela-oficios.webp",
       "membershipLevel": 1,
-      "category": "Educación y Formación",
-      "description": "Capacitación técnica en oficios para el desarrollo profesional comunitario"
+      "category": "Education and Training",
+      "description": "Technical training in trades for community professional development"
     }
   ]
 }

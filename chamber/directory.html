@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Directorio oficial de empresas miembros de la Cámara de Comercio del Municipio Juan José Mora. Encuentra negocios locales, servicios y oportunidades de networking.">
-    <meta name="author" content="Tu Nombre Completo">
+    <meta name="author" content="Jernigam Godenvoy Gonzalez Rivero">
     
     <!-- Open Graph Meta Tags para Facebook -->
-    <meta property="og:title" content="Directorio de Empresas - Cámara de Comercio Juan José Mora">
+    <meta property="og:title" content="Business Directory - Juan José Mora Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://tuusuario.github.io/wdd231/chamber/images/og-image.jpg">
-    <meta property="og:url" content="https://tuusuario.github.io/wdd231/chamber/directory.html">
-    <meta property="og:description" content="Descubre las empresas miembros de nuestra cámara de comercio y conecta con la comunidad empresarial local.">
+    <meta property="og:url" content="https://jgxilos.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Discover the member companies of our chamber of commerce and connect with the local business community..">
     
-    <title>Directorio de Miembros | Cámara de Comercio Juan José Mora</title>
+    <title>Member Directory | Juan José Mora Chamber of Commerce</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="styles/directory.css">
 </head>
 <body>
-    <!-- Header simplificado según wireframe -->
+
     <header>
         <div class="header-container">
             <div class="logo">
@@ -36,16 +36,16 @@
                     <rect x="2" y="2" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2"/>
                     <path d="M10 20L20 12L30 20M12 22V30H18V24H22V30H28V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <span>Cámara de Comercio Juan José Mora</span>
+                <span>Juan José Mora Chamber of Commerce</span>
             </div>
             
-            <!-- Toggle tema oscuro/claro -->
-            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+            <!-- Toggle dark/light theme -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Change topic">
                 <div class="theme-icon"></div>
             </button>
             
-            <!-- Botón menú hamburguesa -->
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+            <!-- Hamburger menu button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -62,9 +62,9 @@
         </div>
     </header>
 
-    <!-- Contenido principal -->
+    <!-- Main content -->
     <main>
-        <!-- Hero section con imagen escalable -->
+        <!-- Hero section with scalable image -->
         <section class="hero-section">
             <div class="hero-image">
                 <p>scalable, responsive hero image</p>
@@ -72,12 +72,12 @@
             </div>
         </section>
 
-        <!-- Título de la página -->
-        <h1 class="page-title">Directorio de Miembros</h1>
+        <!-- Page title -->
+        <h1 class="page-title">Member Directory</h1>
 
-        <!-- Controles de visualización -->
+        <!-- Display controls -->
         <div class="view-controls">
-            <button id="gridBtn" class="view-btn active" aria-label="Vista de cuadrícula">
+            <button id="gridBtn" class="view-btn active" aria-label="Grid view">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect x="3" y="3" width="7" height="7"></rect>
                     <rect x="14" y="3" width="7" height="7"></rect>
@@ -97,25 +97,25 @@
             </button>
         </div>
 
-        <!-- Contenedor de miembros -->
+        <!-- Member container -->
         <div id="membersContainer" class="members-grid">
-            <!-- Los miembros se cargarán dinámicamente aquí -->
+            <!-- Members will be loaded dynamically here -->
         </div>
     </main>
 
-    <!-- Footer según wireframe -->
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
-            <!-- Información de contacto (izquierda) -->
+
             <div class="footer-contact">
-                <h3>Cámara de Comercio Juan José Mora</h3>
-                <p>Calle Principal #123</p>
+                <h3>Juan José Mora Chamber of Commerce</h3>
+                <p>Main Street #123</p>
                 <p>Juan José Mora, Venezuela</p>
                 <p>info@camarajjmora.org</p>
                 <p>(+58) 424-XXX-XXXX</p>
             </div>
             
-            <!-- Iconos de redes sociales (centro) -->
+            <!-- Social media icons (center) -->
             <div class="footer-social">
                 <a href="#" aria-label="YouTube" class="social-icon">
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="currentColor">
@@ -137,11 +137,11 @@
                 </a>
             </div>
             
-            <!-- Información del proyecto (derecha) -->
+            <!-- Project information (right) -->
             <div class="footer-info">
                 <p><strong>WDD231 Class Project</strong></p>
-                <p>Tu Nombre Completo</p>
-                <p>&copy; <span id="currentYear"></span> Cámara de Comercio Juan José Mora</p>
+                <p>Jernigam Gonzalez</p>
+                <p>&copy; <span id="currentYear"></span> Juan José Mora Chamber of Commerce</p>
                 <p>Última modificación: <span id="lastModified"></span></p>
             </div>
         </div>

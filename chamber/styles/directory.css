@@ -1,8 +1,8 @@
 /* ========================================
-   VARIABLES CSS Y CONFIGURACIÓN GLOBAL
+   CSS VARIABLES AND GLOBAL CONFIGURATION
    ======================================== */
 :root {
-    /* Paleta de colores según wireframe */
+    /* Color palette according to wireframe */
     --primary-color: #2c3e50;
     --secondary-color: #7f8c8d;
     --accent-color: #95a5a6;
@@ -12,23 +12,23 @@
     --text-light: #7f8c8d;
     --border-color: #bdc3c7;
     
-    /* Tipografía */
+    /* Typography */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
     
-    /* Espaciado */
+    /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     
-    /* Transiciones */
+    /* Transitions */
     --transition: all 0.3s ease;
 }
 
 /* ========================================
-   ESTILOS BASE
+   BASIC STYLES
    ======================================== */
 * {
     margin: 0;
@@ -54,7 +54,7 @@ main {
 }
 
 /* ========================================
-   HEADER SEGÚN WIREFRAME
+   HEADER ACCORDING TO WIREFRAME
    ======================================== */
 header {
     background-color: var(--background-light);
@@ -92,7 +92,7 @@ header {
     font-weight: 600;
 }
 
-/* Toggle tema oscuro */
+/* Toggle dark theme */
 .theme-toggle {
     width: 40px;
     height: 40px;
@@ -119,7 +119,7 @@ header {
     transform: scale(1.1);
 }
 
-/* Botón menú hamburguesa */
+/* Hamburger menu button */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -173,7 +173,7 @@ nav a.active {
 }
 
 /* ========================================
-   HERO SECTION CON IMAGEN ESCALABLE
+   HERO SECTION WITH SCALABLE IMAGE
    ======================================== */
 .hero-section {
     width: 100%;
@@ -225,7 +225,7 @@ nav a.active {
 }
 
 /* ========================================
-   TÍTULO DE PÁGINA
+   PAGE TITLE
    ======================================== */
 .page-title {
     font-family: var(--font-heading);
@@ -237,7 +237,7 @@ nav a.active {
 }
 
 /* ========================================
-   CONTROLES DE VISUALIZACIÓN
+   DISPLAY CONTROLS
    ======================================== */
 .view-controls {
     display: flex;
@@ -280,7 +280,7 @@ nav a.active {
 }
 
 /* ========================================
-   CONTENEDOR DE MIEMBROS - VISTA GRID
+   MEMBER CONTAINER - GRID VIEW
    ======================================== */
 .members-grid {
     display: grid;
@@ -365,7 +365,7 @@ nav a.active {
 }
 
 /* ========================================
-   CONTENEDOR DE MIEMBROS - VISTA LIST
+   MEMBER CONTAINER - LIST VIEW
    ======================================== */
 .members-list {
     display: flex;
@@ -404,7 +404,7 @@ nav a.active {
 }
 
 /* ========================================
-   FOOTER SEGÚN WIREFRAME
+   FOOTER ACCORDING TO WIREFRAME
    ======================================== */
 footer {
     background-color: var(--background-light);
@@ -422,7 +422,7 @@ footer {
     align-items: start;
 }
 
-/* Información de contacto (izquierda) */
+/* Contact information (left) */
 .footer-contact {
     text-align: left;
 }
@@ -441,7 +441,7 @@ footer {
     margin-bottom: 0.25rem;
 }
 
-/* Iconos sociales (centro) */
+/* Social icons (center) */
 .footer-social {
     display: flex;
     gap: var(--spacing-sm);
@@ -464,7 +464,7 @@ footer {
     height: 50px;
 }
 
-/* Información del proyecto (derecha) */
+/* Project information (right) */
 .footer-info {
     text-align: right;
 }
@@ -480,7 +480,7 @@ footer {
 }
 
 /* ========================================
-   ANIMACIONES
+   ANIMATIONS
    ======================================== */
 @keyframes fadeIn {
     from {
@@ -524,7 +524,7 @@ footer {
     }
 }
 
-/* Móviles */
+/* Cell phones */
 @media (max-width: 640px) {
     /* Header responsive */
     .header-container {
@@ -578,7 +578,7 @@ footer {
         font-size: 0.875rem;
     }
     
-    /* Título responsive */
+    /* Responsive title */
     .page-title {
         font-size: 1.75rem;
         margin: var(--spacing-md);
@@ -601,7 +601,7 @@ footer {
     }
 }
 
-/* Pantallas muy pequeñas */
+/* Very small screens */
 @media (max-width: 320px) {
     .logo svg {
         width: 30px;
