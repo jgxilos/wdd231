@@ -76,28 +76,33 @@ function initMobileMenu() {
 function initThemeToggle() {
     const themeToggle = document.getElementById('themeToggle');
     
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-            // Save preference (optional - can be removed if localStorage not desired)
-            const isDark = document.body.classList.contains('dark-theme');
-            try {
-                localStorage.setItem('theme', isDark ? 'dark' : 'light');
-            } catch (e) {
-                console.log('localStorage not available');
-            }
-        });
-        
-        // Load saved preference (optional - can be removed if localStorage not desired)
-        try {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-theme');
-            }
-        } catch (e) {
-            console.log('localStorage not available');
-        }
+    if (!themeToggle) {
+        console.error('Theme toggle button not found');
+        return;
     }
+    
+    // Load saved theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+    }
+    
+    // Add click event listener
+    themeToggle.addEventListener('click', function() {
+        console.log('Theme toggle clicked'); // Debug log
+        document.body.classList.toggle('dark-theme');
+        
+        // Save preference
+        if (document.body.classList.contains('dark-theme')) {
+            localStorage.setItem('theme', 'dark');
+            console.log('Dark theme activated');
+        } else {
+            localStorage.setItem('theme', 'light');
+            console.log('Light theme activated');
+        }
+    });
+    
+    console.log('Theme toggle initialized successfully');
 }
 
 // ========================================
