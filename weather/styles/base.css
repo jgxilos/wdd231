@@ -148,6 +148,16 @@ footer {
   to { transform: rotate(360deg); }
 }
 
+/* Error State */
+.error-message {
+  color: #e74c3c;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffeaea;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
   .weather-card {
