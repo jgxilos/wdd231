@@ -277,8 +277,8 @@ nav a.active {
     z-index: 2;
     max-width: 800px;
     padding: var(--spacing-lg);
-    color: var(--background-white);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
 }
 
 .hero-title {
@@ -286,12 +286,13 @@ nav a.active {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
+    color: #2c3e50;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: var(--spacing-lg);
-    opacity: 0.95;
+    color: #2c3e50;
 }
 
 .cta-button {
@@ -365,12 +366,14 @@ nav a.active {
 }
 
 .home-card {
-    background-color: #f5f5f5;
+    background-color: var(--background-white);
     border: 1px solid #d0d0d0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .home-card:hover {
@@ -391,6 +394,7 @@ nav a.active {
 .card-content {
     padding: var(--spacing-md);
     background-color: var(--background-white);
+    flex: 1;
 }
 
 /* ========================================
@@ -597,13 +601,14 @@ nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-md);
+    padding: 0;
+    overflow: hidden;
 }
 
 .spotlight-image-home img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .spotlight-info-home {
@@ -1154,6 +1159,19 @@ body.dark-theme .hero-home {
     background: linear-gradient(135deg, #1e293b 0%, #3b82f6 100%);
 }
 
+body.dark-theme .cta-button {
+    color: #ffffff;
+}
+
+body.dark-theme .keynote-tickets-btn {
+    color: #ffffff;
+    background-color: rgba(127, 140, 141, 0.9);
+}
+
+body.dark-theme .keynote-tickets-btn:hover {
+    background-color: rgba(127, 140, 141, 1);
+}
+
 body.dark-theme nav a {
     color: var(--text-dark);
 }
@@ -1191,12 +1209,13 @@ body.dark-theme .business-image-placeholder {
 /* Dark theme for home page specific elements */
 body.dark-theme .home-card,
 body.dark-theme .spotlight-card-home {
-    background-color: #2a2a2a;
-    border-color: #3a3a3a;
+    background-color: #334155;
+    border-color: #475569;
 }
 
 body.dark-theme .card-title {
-    background-color: #1e293b;
+    background-color: #3b82f6;
+    color: #ffffff;
 }
 
 body.dark-theme .card-content,
@@ -1211,14 +1230,16 @@ body.dark-theme .forecast-label,
 body.dark-theme .temperature-large,
 body.dark-theme .weather-desc-large,
 body.dark-theme .forecast-value {
-    color: var(--text-dark);
+    color: #ffffff;
 }
 
 body.dark-theme .event-date-home,
 body.dark-theme .event-item-home p,
 body.dark-theme .weather-details-compact,
-body.dark-theme .spotlight-info-home p {
-    color: var(--text-light);
+body.dark-theme .weather-details-compact p,
+body.dark-theme .spotlight-info-home p,
+body.dark-theme .spotlight-info-home a {
+    color: #cbd5e1;
 }
 
 body.dark-theme .event-item-home,
@@ -1228,10 +1249,13 @@ body.dark-theme .forecast-item-simple {
 
 body.dark-theme .spotlight-image-home {
     background-color: #475569;
-    background-image: linear-gradient(135deg, #5a6c7d 25%, transparent 25%) -25px 0,
-                linear-gradient(225deg, #5a6c7d 25%, transparent 25%) -25px 0,
-                linear-gradient(315deg, #5a6c7d 25%, transparent 25%),
-                linear-gradient(45deg, #5a6c7d 25%, transparent 25%);
+    background-image: 
+        linear-gradient(135deg, #5a6c7d 25%, transparent 25%),
+        linear-gradient(225deg, #5a6c7d 25%, transparent 25%),
+        linear-gradient(315deg, #5a6c7d 25%, transparent 25%),
+        linear-gradient(45deg, #5a6c7d 25%, transparent 25%);
+    background-size: 50px 50px;
+    background-position: 0 0, 0 0, -25px -25px, 25px 25px;
 }
 
 body.dark-theme .spotlight-header-home {
