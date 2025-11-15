@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juan José Mora Chamber of Commerce - Supporting local businesses and fostering economic growth in our community.">
+    <meta name="author" content="Jernigam Godenvoy Gonzalez Rivero">
+    
+    <!-- Open Graph Meta Tags for Facebook -->
+    <meta property="og:title" content="Juan José Mora Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jgxilos.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://jgxilos.github.io/wdd231/chamber/index.html">
+    <meta property="og:description" content="Supporting local businesses and fostering economic growth in Juan José Mora, Venezuela.">
+    
+    <title>Home | Juan José Mora Chamber of Commerce</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+</head>
+<body>
+    <!-- Header simplified according to wireframe -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2"/>
+                    <path d="M10 20L20 12L30 20M12 22V30H18V24H22V30H28V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Juan José Mora Chamber of Commerce</span>
+            </div>
+            
+            <!-- Mobile hamburger menu button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Dark/Light theme toggle (positioned after nav) -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+                <span class="theme-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Hero section with Call to Action -->
+        <section class="hero-section hero-home" aria-label="Hero banner">
+            <h1 class="visually-hidden">Juan José Mora Chamber of Commerce Home</h1>
+            <img src="images/banner.webp" alt="Juan José Mora Chamber of Commerce banner" class="hero-banner-img">
+            <div class="hero-content">
+                <h2 class="hero-title">Empowering Local Business</h2>
+                <p class="hero-subtitle">Join our thriving community of entrepreneurs and business leaders</p>
+                <a href="join.html" class="cta-button">Join the Chamber</a>
+            </div>
+            <button class="keynote-tickets-btn">Keynote Tickets</button>
+        </section>
+
+        <!-- Main content grid (desktop: 3 columns for cards) -->
+        <h2 class="home-main-title">Home</h2>
+        
+        <div class="home-cards-grid">
+            <!-- Events Card -->
+            <section class="home-card events-card">
+                <h3 class="card-title">Events</h3>
+                <div class="card-content">
+                    <div class="event-item-home">
+                        <h4>Annual Business Networking Gala</h4>
+                        <p class="event-date-home">December 15, 2025 | 7:00 PM</p>
+                        <p>Join us for an evening of networking with local business leaders and entrepreneurs. Featuring keynote speaker Maria Rodriguez.</p>
+                    </div>
+                    <div class="event-item-home">
+                        <h4>Small Business Workshop</h4>
+                        <p class="event-date-home">December 20, 2025 | 2:00 PM</p>
+                        <p>Learn essential digital marketing strategies for small businesses. Free for chamber members.</p>
+                    </div>
+                    <div class="event-item-home">
+                        <h4>Holiday Market Fair</h4>
+                        <p class="event-date-home">December 22-24, 2025</p>
+                        <p>Support local vendors at our annual holiday market in the town square.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Current Weather Card -->
+            <section class="home-card weather-card-home">
+                <h3 class="card-title">Current Weather</h3>
+                <div class="card-content weather-content">
+                    <img id="weather-icon" src="" alt="Weather icon" class="weather-icon-large">
+                    <p id="current-temp" class="temperature-large">--°F</p>
+                    <p id="weather-description" class="weather-desc-large">Loading...</p>
+                    <div class="weather-details-compact">
+                        <p>High: <span id="temp-high">--°</span></p>
+                        <p>Low: <span id="temp-low">--°</span></p>
+                        <p>Humidity: <span id="humidity">--%</span></p>
+                        <p>Sunrise: <span id="sunrise">--:--</span></p>
+                        <p>Sunset: <span id="sunset">--:--</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Weather Forecast Card -->
+            <section class="home-card forecast-card-home">
+                <h3 class="card-title">Weather Forecast</h3>
+                <div class="card-content forecast-content">
+                    <div id="forecast-simple" class="forecast-simple">
+                        <div class="forecast-item-simple">
+                            <p class="forecast-label">Today:</p>
+                            <p class="forecast-value" id="forecast-today">--°F</p>
+                        </div>
+                        <div class="forecast-item-simple">
+                            <p class="forecast-label">Wednesday:</p>
+                            <p class="forecast-value" id="forecast-wed">--°F</p>
+                        </div>
+                        <div class="forecast-item-simple">
+                            <p class="forecast-label">Thursday:</p>
+                            <p class="forecast-value" id="forecast-thu">--°F</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Company Spotlights Section -->
+        <section class="spotlights-home-section">
+            <h2 class="section-title-spotlights">Member Spotlights</h2>
+            <div id="spotlights-list" class="spotlights-grid-home">
+                <!-- Spotlights will be populated by JavaScript -->
+                <div class="spotlight-placeholder">
+                    <p>Loading member spotlights...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer according to wireframe -->
+    <footer>
+        <div class="footer-container">
+            <!-- Contact information (left) -->
+            <div class="footer-contact">
+                <h3>Juan José Mora Chamber of Commerce</h3>
+                <p>123 Business Avenue</p>
+                <p>Juan José Mora, Carabobo, Venezuela</p>
+                <p>info@camarajjmora.org</p>
+                <p>(+58) 424-123-4567</p>
+            </div>
+            
+            <!-- Social media icons (center) -->
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook" class="social-icon">
+                    <img src="images/facebook.svg" alt="Facebook" width="50" height="50">
+                </a>
+                <a href="#" aria-label="Twitter" class="social-icon">
+                    <img src="images/twitter.svg" alt="Twitter" width="50" height="50">
+                </a>
+                <a href="#" aria-label="LinkedIn" class="social-icon">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="50" height="50">
+                </a>
+            </div>
+            
+            <!-- Project information (right) -->
+            <div class="footer-info">
+                <p><strong>WDD231 Class Project</strong></p>
+                <p>Jernigam Godenvoy Gonzalez Rivero</p>
+                <p>&copy; <span id="currentYear"></span> Juan José Mora Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js"></script>
+    <script src="scripts/home.js"></script>
+</body>
+</html>
