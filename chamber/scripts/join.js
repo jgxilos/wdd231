@@ -8,8 +8,39 @@
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
     setTimestamp();
+    initModalListeners();
+    initFormValidation();
     console.log('✅ Join page initialized');
 });
+
+// ========================================
+// MODAL EVENT LISTENERS
+// ========================================
+function initModalListeners() {
+    // Add event listeners to all "Learn More" buttons
+    const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+    learnMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-modal');
+            if (modalId) {
+                openModal(modalId);
+            }
+        });
+    });
+
+    // Add event listeners to all close buttons
+    const closeButtons = document.querySelectorAll('.close-modal');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const modalId = this.getAttribute('data-close-modal');
+            if (modalId) {
+                closeModal(modalId);
+            }
+        });
+    });
+
+    console.log('🎯 Modal event listeners initialized');
+}
 
 // ========================================
 // SET HIDDEN TIMESTAMP FIELD
@@ -73,11 +104,11 @@ function closeModal(modalId) {
 // ========================================
 // FORM VALIDATION ENHANCEMENT
 // ========================================
-
-// Add real-time validation feedback
-const form = document.getElementById('membershipForm');
-
-if (form) {
+function initFormValidation() {
+    const form = document.getElementById('membershipForm');
+    
+    if (!form) return;
+    
     // Get all form inputs
     const inputs = form.querySelectorAll('input[required], textarea');
     
@@ -94,6 +125,23 @@ if (form) {
             }
         });
     });
+
+    // Form submission handling
+    form.addEventListener('submit', function(event) {
+        // Update timestamp right before submission
+        setTimestamp();
+        
+        // Get form data for logging
+        const formData = new FormData(form);
+        console.log('📋 Form submitted with data:');
+        for (let [key, value] of formData.entries()) {
+            console.log(`  ${key}: ${value}`);
+        }
+        
+        console.log('✅ Redirecting to thank you page...');
+    });
+
+    console.log('✅ Form validation initialized');
 }
 
 /**
@@ -109,47 +157,32 @@ function validateField(field) {
 }
 
 // ========================================
-// FORM SUBMISSION HANDLING
-// ========================================
-if (form) {
-    form.addEventListener('submit', function(event) {
-        // Update timestamp right before submission
-        setTimestamp();
-        
-        // Get form data for logging
-        const formData = new FormData(form);
-        console.log('📋 Form submitted with data:');
-        for (let [key, value] of formData.entries()) {
-            console.log(`  ${key}: ${value}`);
-        }
-        
-        // Form will naturally submit via GET method to thankyou.html
-        console.log('✅ Redirecting to thank you page...');
-    });
-}
-
-// ========================================
 // ACCESSIBILITY ENHANCEMENTS
 // ========================================
-
-// Add keyboard navigation for membership cards
-const membershipCards = document.querySelectorAll('.membership-card');
-membershipCards.forEach(card => {
-    // Make cards focusable
-    card.setAttribute('tabindex', '0');
-    
-    // Add keyboard event listener
-    card.addEventListener('keydown', function(event) {
-        // Enter or Space key activates the Learn More button
-        if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            const learnMoreBtn = this.querySelector('.learn-more-btn');
-            if (learnMoreBtn) {
-                learnMoreBtn.click();
+function initAccessibilityFeatures() {
+    // Add keyboard navigation for membership cards
+    const membershipCards = document.querySelectorAll('.membership-card');
+    membershipCards.forEach(card => {
+        // Cards are already focusable via buttons inside them
+        
+        // Add keyboard event listener to card
+        card.addEventListener('keydown', function(event) {
+            // Enter or Space key activates the Learn More button
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                const learnMoreBtn = this.querySelector('.learn-more-btn');
+                if (learnMoreBtn) {
+                    learnMoreBtn.click();
+                }
             }
-        }
+        });
     });
-});
+
+    console.log('♿ Accessibility features enabled');
+}
+
+// Initialize accessibility features
+document.addEventListener('DOMContentLoaded', initAccessibilityFeatures);
 
 // ========================================
 // CONSOLE LOG INFO

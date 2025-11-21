@@ -1422,10 +1422,6 @@ body.dark-theme .spotlight-header-home {
         margin: var(--spacing-md);
     }
     
-    .section-title {
-        font-size: 1.5rem;
-    }
-    
     /* Home cards grid mobile */
     .home-cards-grid {
         grid-template-columns: 1fr;

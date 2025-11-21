@@ -21,6 +21,7 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Section title - consolidated */
 .section-title {
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -118,9 +119,9 @@
     flex: 1;
 }
 
-/* Submit Button */
+/* Submit Button - Improved contrast */
 .submit-btn {
-    background-color: #10b981;
+    background-color: #059669;
     color: white;
     padding: 1rem 2rem;
     font-family: var(--font-body);
@@ -130,14 +131,14 @@
     border-radius: 50px;
     cursor: pointer;
     transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);
     margin-top: var(--spacing-md);
 }
 
 .submit-btn:hover {
-    background-color: #059669;
+    background-color: #047857;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+    box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
 }
 
 .submit-btn:active {
@@ -166,6 +167,23 @@
     
     /* Animation */
     animation: slideInUp 0.6s ease-out forwards;
+}
+
+/* Animation delays using classes instead of inline styles */
+.card-delay-1 {
+    animation-delay: 0.1s;
+}
+
+.card-delay-2 {
+    animation-delay: 0.2s;
+}
+
+.card-delay-3 {
+    animation-delay: 0.3s;
+}
+
+.card-delay-4 {
+    animation-delay: 0.4s;
 }
 
 /* Keyframe animation for cards */
@@ -278,7 +296,7 @@
     width: 40px;
     height: 40px;
     border: none;
-    background-color: #ef4444;
+    background-color: #dc2626;
     color: white;
     font-size: 1.5rem;
     border-radius: 50%;
@@ -292,7 +310,7 @@
 }
 
 .close-modal:hover {
-    background-color: #dc2626;
+    background-color: #991b1b;
     transform: rotate(90deg);
 }
 
