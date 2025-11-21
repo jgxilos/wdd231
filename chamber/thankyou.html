@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for your membership application - Juan José Mora Chamber of Commerce">
+    <meta name="author" content="Jernigam Godenvoy Gonzalez Rivero">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Application Received - Juan José Mora Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jgxilos.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://jgxilos.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:description" content="Your membership application has been received.">
+    
+    <title>Thank You | Juan José Mora Chamber of Commerce</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2"/>
+                    <path d="M10 20L20 12L30 20M12 22V30H18V24H22V30H28V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Juan José Mora Chamber of Commerce</span>
+            </div>
+            
+            <!-- Mobile hamburger menu button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Dark/Light theme toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+                <span class="theme-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Success Message Section -->
+        <section class="thank-you-section">
+            <div class="success-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="40" cy="40" r="38" stroke="#10b981" stroke-width="4" fill="none"/>
+                    <path d="M20 40L32 52L60 24" stroke="#10b981" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            
+            <h1 class="thank-you-title">Application Received!</h1>
+            <p class="thank-you-message">
+                Thank you for your interest in joining the Juan José Mora Chamber of Commerce. 
+                We have received your membership application and will review it shortly.
+            </p>
+            <p class="thank-you-submessage">
+                A confirmation email has been sent to your email address. Our team will contact you 
+                within 2-3 business days to complete your membership registration.
+            </p>
+        </section>
+
+        <!-- Application Summary Section -->
+        <section class="application-summary">
+            <h2 class="summary-title">Application Summary</h2>
+            
+            <div class="summary-card">
+                <div class="summary-header">
+                    <h3>Applicant Information</h3>
+                </div>
+                
+                <div class="summary-content">
+                    <div class="info-row">
+                        <span class="info-label">Name:</span>
+                        <span class="info-value" id="displayName">Loading...</span>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-label">Email:</span>
+                        <span class="info-value" id="displayEmail">Loading...</span>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-label">Mobile Phone:</span>
+                        <span class="info-value" id="displayPhone">Loading...</span>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-label">Business/Organization:</span>
+                        <span class="info-value" id="displayOrganization">Loading...</span>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-label">Application Submitted:</span>
+                        <span class="info-value" id="displayTimestamp">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Steps Card -->
+            <div class="next-steps-card">
+                <h3>What Happens Next?</h3>
+                <ol class="steps-list">
+                    <li>Our membership committee will review your application</li>
+                    <li>You will receive an email confirmation within 24 hours</li>
+                    <li>A member of our team will contact you within 2-3 business days</li>
+                    <li>Upon approval, you'll receive your membership welcome packet</li>
+                    <li>You'll gain immediate access to member benefits and resources</li>
+                </ol>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <a href="index.html" class="btn btn-primary">Return to Home</a>
+                <a href="directory.html" class="btn btn-secondary">Browse Member Directory</a>
+            </div>
+        </section>
+
+        <!-- Additional Information Section -->
+        <section class="additional-info">
+            <div class="info-card">
+                <h3>📞 Need Help?</h3>
+                <p>If you have any questions about your application or membership, please contact us:</p>
+                <p><strong>Email:</strong> info@camarajjmora.org</p>
+                <p><strong>Phone:</strong> (+58) 424-123-4567</p>
+                <p><strong>Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>🌟 Member Benefits</h3>
+                <p>As a new member, you'll have access to:</p>
+                <ul>
+                    <li>Networking events and workshops</li>
+                    <li>Business directory listing</li>
+                    <li>Marketing and promotional opportunities</li>
+                    <li>Educational resources and training</li>
+                    <li>Community advocacy and support</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Contact information -->
+            <div class="footer-contact">
+                <h3>Juan José Mora Chamber of Commerce</h3>
+                <p>123 Business Avenue</p>
+                <p>Juan José Mora, Carabobo, Venezuela</p>
+                <p>info@camarajjmora.org</p>
+                <p>(+58) 424-123-4567</p>
+            </div>
+            
+            <!-- Social media icons -->
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook" class="social-icon">
+                    <img src="images/facebook.svg" alt="Facebook" width="50" height="50">
+                </a>
+                <a href="#" aria-label="Twitter" class="social-icon">
+                    <img src="images/twitter.svg" alt="Twitter" width="50" height="50">
+                </a>
+                <a href="#" aria-label="LinkedIn" class="social-icon">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="50" height="50">
+                </a>
+            </div>
+            
+            <!-- Project information -->
+            <div class="footer-info">
+                <p><strong>WDD231 Class Project</strong></p>
+                <p>Jernigam Godenvoy Gonzalez Rivero</p>
+                <p>&copy; <span id="currentYear"></span> Juan José Mora Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js"></script>
+    <script src="scripts/thankyou.js"></script>
+</body>
+</html>
