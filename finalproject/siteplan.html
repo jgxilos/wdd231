@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DentalCare+ Individual Project Site Plan</title>
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS to implement the selected Color Scheme and Typography */
+
+        /* Color Variables based on the Site Plan */
+        :root {
+            --color-primary: #61BACA;        /* Main Brand Color (Header, Titles) */
+            --color-dark-primary: #1D837F;   /* Accents & Highlights (Borders, Links) */
+            --color-secondary: #3EAEB1;      /* Supporting Visual Elements */
+            --color-soft-accent: #9FD8E1;    /* Soft Accent (Section Background) */
+            --color-neutral-soft: #9CD1CE;   /* UI Neutral */
+            --color-main-bg: #D7EAEE;        /* Main Background */
+        }
+
+        body {
+            font-family: 'Lato', sans-serif; /* Body Text Font */
+            background-color: var(--color-main-bg);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 8px solid var(--color-dark-primary);
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif; /* Heading Font */
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif; /* Heading Font */
+            font-size: 1.8rem;
+            color: var(--color-dark-primary);
+            border-bottom: 3px solid var(--color-secondary);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-top: 1.5rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-palette div {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            color: #111; /* Default text color for contrast */
+            font-weight: 700;
+        }
+
+        /* Specific Color Blocks */
+        .color-primary-block { background-color: var(--color-primary); color: white; }
+        .color-dark-primary-block { background-color: var(--color-dark-primary); color: white; }
+        .color-secondary-block { background-color: var(--color-secondary); color: white; }
+        .color-soft-accent-block { background-color: var(--color-soft-accent); }
+        .color-neutral-soft-block { background-color: var(--color-neutral-soft); }
+        .color-main-bg-block { background-color: var(--color-main-bg); border: 1px dashed var(--color-dark-primary); }
+
+        .wireframe-sketch {
+            background-color: var(--color-neutral-soft);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 10px;
+            border: 2px dashed var(--color-dark-primary);
+        }
+
+        .wireframe-sketch h4 {
+            color: var(--color-dark-primary);
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DentalCare+</h1>
+        <p>Individual Project Site Plan (WDD 231)</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 1. Site Name -->
+        <section>
+            <h2>1. Site Name</h2>
+            <h3>DentalCare+</h3>
+            <p><strong>Rationale:</strong> This name conveys professionalism, trust, and health. It reflects the purpose of offering a modern, human, and accessible dental experience focused on patient well-being and high-quality services.</p>
+            <p><strong>Suggested Domain (Optional):</strong> <code>dentalcareplus.com</code></p>
+        </section>
+
+        <!-- 2. Site Purpose -->
+        <section>
+            <h2>2. Site Purpose</h2>
+            <p>The main purpose of DentalCare+ is to offer an informative, accessible, and visually modern website for patients seeking reliable dental care. The site will serve as a central hub to:</p>
+            <ul>
+                <li>Provide a clear presentation of the clinic, its mission, and its values.</li>
+                <li>Detail the comprehensive catalog of dental services offered (cleanings, orthodontics, implants, whitening, etc.).</li>
+                <li>Facilitate online appointment requests via a functional, validated form.</li>
+                <li>Display complete contact information, hours, and location with an interactive map.</li>
+                <li>Build confidence and credibility through patient testimonials.</li>
+            </ul>
+        </section>
+
+        <!-- 3. Scenarios -->
+        <section>
+            <h2>3. Scenarios (Target Audience Questions)</h2>
+            <p>These are typical questions a site visitor might ask, which drive the content development:</p>
+            <ol>
+                <li><strong>“What dental services does this clinic offer, and which one is right for me?”</strong> (<em>Requires a detailed Service section with clear descriptions.</em>)</li>
+                <li><strong>“Where is the clinic located, and how can I contact them immediately?”</strong> (<em>Requires complete Contact details, hours, and an embedded map.</em>)</li>
+                <li><strong>“Can I request an appointment online quickly and securely?”</strong> (<em>Requires a simple, functional, and validated Appointment Form.</em>)</li>
+                <li><strong>“What do other patients say about the quality of treatment received?”</strong> (<em>Requires a Testimonials section to build trust.</em>)</li>
+            </ol>
+        </section>
+
+        <!-- 4. Color Scheme -->
+        <section>
+            <h2>4. Color Scheme</h2>
+            <p>The chosen palette is based on colors that convey cleanliness, health, and confidence. They will be used consistently across the site.</p>
+            <div class="color-palette">
+                <h3>Primary Colors</h3>
+                <div class="color-primary-block">#61BACA (Primary Brand Color) | Usage: Header Background, Primary Buttons ("Book Appointment"), Primary Icons, Main Links.</div>
+                <div class="color-dark-primary-block">#1D837F (Primary Dark / Accent) | Usage: Button Hover State, Strong Separators, Footer Background, Main Headings (H1, H2).</div>
+                
+                <h3>Supporting Colors</h3>
+                <div class="color-secondary-block">#3EAEB1 (Secondary Visual Element) | Usage: Service Card Icons, Sub-headings (H3), Decorative Underlines.</div>
+                <div class="color-soft-accent-block">#9FD8E1 (Soft Accent) | Usage: Soft Backgrounds for alternate sections (e.g., Testimonials, About Us).</div>
+                
+                <h3>Neutral Colors</h3>
+                <div class="color-neutral-soft-block">#9CD1CE (UI Neutral) | Usage: Soft borders, Wireframe background, Subtle background in forms.</div>
+                <div class="color-main-bg-block">#D7EAEE (Main Background) | Usage: Global page background for most sections.</div>
+            </div>
+        </section>
+
+        <!-- 5. Typography -->
+        <section>
+            <h2>5. Typography</h2>
+            <p>The font selection balances professionalism, clarity, and modern aesthetics.</p>
+            <ul>
+                <li><strong>Headings (H1, H2, H3):</strong> <span style="font-family: 'Montserrat', sans-serif;">Montserrat (Sans-serif)</span>. Transmits cleanliness, professionalism, and clear visual hierarchy.</li>
+                <li><strong>Body Text (Paragraphs, Lists):</strong> <span style="font-family: 'Lato', sans-serif;">Lato (Sans-serif)</span>. Chosen for high legibility on digital screens, providing a feeling of clarity and accessibility.</li>
+                <li><strong>Highlighted Elements (Quotes, CTAs):</strong> *Playfair Display (Serif)*. (This font is optional for special sections like Testimonials, adding a touch of confidence/formality).</li>
+            </ul>
+        </section>
+
+        <!-- 6. Wireframe -->
+        <section>
+            <h2>6. Wireframe</h2>
+            <p>A simple representation of the Home Page layout, focusing on the relationship between content blocks.</p>
+
+            <!-- Mobile Wireframe -->
+            <div class="wireframe-sketch">
+                <h4>Mobile Viewport Sketch (Vertical Stacking)</h4>
+                <p style="border: 1px solid #666; padding: 5px; text-align: center;">[HEADER: Logo + Mobile Menu Icon]</p>
+                <div style="height: 150px; background-color: #eee; border: 1px dashed #333; margin-top: 10px; text-align: center; padding-top: 50px;">
+                    HERO SECTION (H1 + Text + CTA Button)
+                </div>
+                <div style="height: 80px; background-color: var(--color-soft-accent); margin-top: 10px; text-align: center; padding-top: 30px;">
+                    ABOUT US (H2 + 3 Value Blocks stacked vertically)
+                </div>
+                <div style="height: 150px; background-color: white; margin-top: 10px; text-align: center; padding-top: 50px;">
+                    SERVICES (H2 + 4 Service Cards stacked)
+                </div>
+                <div style="height: 100px; background-color: var(--color-soft-accent); margin-top: 10px; text-align: center; padding-top: 40px;">
+                    TESTIMONIALS (H2 + 2 Testimonial Cards stacked)
+                </div>
+                <div style="height: 200px; background-color: white; margin-top: 10px; text-align: center; padding-top: 50px;">
+                    APPOINTMENT FORM (H2 + Input Fields stacked)
+                </div>
+                <div style="height: 150px; background-color: var(--color-soft-accent); margin-top: 10px; text-align: center; padding-top: 50px;">
+                    CONTACT & MAP (H2 + Info + Small Map)
+                </div>
+                <p style="border: 1px solid #666; padding: 5px; text-align: center; margin-top: 10px;">[FOOTER]</p>
+                
+            </div>
+
+            <!-- Desktop Wireframe -->
+            <div class="wireframe-sketch mt-8">
+                <h4>Desktop/Tablet Viewport Sketch (Multi-Column Layouts)</h4>
+                <p style="border: 1px solid #666; padding: 5px; text-align: center;">[HEADER: Logo + Navigation Menu + CTA Button]</p>
+                
+                <div style="display: flex; height: 150px; margin-top: 10px;">
+                    <div style="flex: 1; background-color: #eee; border: 1px dashed #333; text-align: center; padding-top: 50px;">
+                        HERO TEXT (H1 + Text + CTA)
+                    </div>
+                    <div style="flex: 1; background-color: #ccc; border: 1px dashed #333; text-align: center; padding-top: 50px;">
+                        HERO IMAGE
+                    </div>
+                </div>
+
+                <div style="height: 80px; background-color: var(--color-soft-accent); margin-top: 10px; text-align: center; padding-top: 30px; display: flex; justify-content: space-around; align-items: center;">
+                    ABOUT US (H2 + [Value Block 1] [Value Block 2] [Value Block 3])
+                </div>
+                
+                <div style="height: 150px; background-color: white; margin-top: 10px; text-align: center; padding-top: 50px; display: flex; justify-content: space-around; align-items: center;">
+                    SERVICES (H2 + [Card 1] [Card 2] [Card 3] [Card 4])
+                </div>
+
+                <div style="height: 100px; background-color: var(--color-soft-accent); margin-top: 10px; text-align: center; padding-top: 40px; display: flex; justify-content: space-around; align-items: center;">
+                    TESTIMONIALS (H2 + [Testimonial 1] [Testimonial 2])
+                </div>
+
+                <div style="display: flex; height: 200px; margin-top: 10px;">
+                    <div style="flex: 1; background-color: white; border: 1px dashed #333; text-align: center; padding-top: 50px;">
+                        APPOINTMENT FORM (H2 + Input Fields)
+                    </div>
+                    <div style="flex: 1; background-color: var(--color-soft-accent); border: 1px dashed #333; text-align: center; padding-top: 50px;">
+                        CONTACT INFO + LARGE MAP
+                    </div>
+                </div>
+                <p style="border: 1px solid #666; padding: 5px; text-align: center; margin-top: 10px;">[FOOTER]</p>
+                
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="container" style="text-align: center; color: white;">
+            <p>This document serves as the Site Plan blueprint for the DentalCare+ project.</p>
+        </div>
+    </footer>
+</body>
+</html>
