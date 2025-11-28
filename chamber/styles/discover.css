@@ -28,11 +28,6 @@
     }
 }
 
-/* Main container */
-main {
-    max-width: 1400px;
-}
-
 /* Discover Grid - Mobile First (320px to 640px) */
 .discover-grid {
     display: grid;
@@ -51,15 +46,46 @@ main {
     margin-bottom: var(--spacing-xl);
 }
 
-/* Assign grid areas to cards */
-.discover-card:nth-child(1) { grid-area: card1; }
-.discover-card:nth-child(2) { grid-area: card2; }
-.discover-card:nth-child(3) { grid-area: card3; }
-.discover-card:nth-child(4) { grid-area: card4; }
-.discover-card:nth-child(5) { grid-area: card5; }
-.discover-card:nth-child(6) { grid-area: card6; }
-.discover-card:nth-child(7) { grid-area: card7; }
-.discover-card:nth-child(8) { grid-area: card8; }
+/* Assign grid areas to cards and animation delays - CONSOLIDATED */
+.discover-card:nth-child(1) { 
+    grid-area: card1;
+    animation-delay: 0.1s;
+}
+
+.discover-card:nth-child(2) { 
+    grid-area: card2;
+    animation-delay: 0.2s;
+}
+
+.discover-card:nth-child(3) { 
+    grid-area: card3;
+    animation-delay: 0.3s;
+}
+
+.discover-card:nth-child(4) { 
+    grid-area: card4;
+    animation-delay: 0.4s;
+}
+
+.discover-card:nth-child(5) { 
+    grid-area: card5;
+    animation-delay: 0.5s;
+}
+
+.discover-card:nth-child(6) { 
+    grid-area: card6;
+    animation-delay: 0.6s;
+}
+
+.discover-card:nth-child(7) { 
+    grid-area: card7;
+    animation-delay: 0.7s;
+}
+
+.discover-card:nth-child(8) { 
+    grid-area: card8;
+    animation-delay: 0.8s;
+}
 
 /* Card Styles */
 .discover-card {
@@ -71,16 +97,6 @@ main {
     transition: var(--transition);
     animation: fadeInUp 0.6s ease-out backwards;
 }
-
-/* Staggered animation delays */
-.discover-card:nth-child(1) { animation-delay: 0.1s; }
-.discover-card:nth-child(2) { animation-delay: 0.2s; }
-.discover-card:nth-child(3) { animation-delay: 0.3s; }
-.discover-card:nth-child(4) { animation-delay: 0.4s; }
-.discover-card:nth-child(5) { animation-delay: 0.5s; }
-.discover-card:nth-child(6) { animation-delay: 0.6s; }
-.discover-card:nth-child(7) { animation-delay: 0.7s; }
-.discover-card:nth-child(8) { animation-delay: 0.8s; }
 
 @keyframes fadeInUp {
     from {
