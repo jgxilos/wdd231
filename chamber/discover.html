@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Juan José Mora - Explore the attractions, landmarks, and culture of our community.">
+    <meta name="author" content="Jernigam Godenvoy Gonzalez Rivero">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Discover - Juan José Mora Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://jgxilos.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://jgxilos.github.io/wdd231/chamber/discover.html">
+    <meta property="og:description" content="Discover the attractions and culture of Juan José Mora, Venezuela.">
+    
+    <title>Discover | Juan José Mora Chamber of Commerce</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/discover.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2"/>
+                    <path d="M10 20L20 12L30 20M12 22V30H18V24H22V30H28V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Juan José Mora Chamber of Commerce</span>
+            </div>
+            
+            <!-- Mobile hamburger menu button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Dark/Light theme toggle -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+                <span class="theme-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Hero section -->
+        <section class="hero-section hero-home" aria-label="Hero banner">
+            <h1 class="visually-hidden">Discover Juan José Mora</h1>
+            <img src="images/banner.webp" alt="Juan José Mora Chamber of Commerce banner" class="hero-banner-img">
+            <div class="hero-content">
+                <h2 class="hero-title">Discover Our Community</h2>
+                <p class="hero-subtitle">Explore the attractions and culture of Juan José Mora</p>
+            </div>
+        </section>
+
+        <!-- Visitor message -->
+        <div id="visitor-message" class="visitor-message"></div>
+
+        <!-- Page title -->
+        <h2 class="page-title">Discover</h2>
+
+        <!-- Discover grid with named areas -->
+        <div id="discover-container" class="discover-grid">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Contact information -->
+            <div class="footer-contact">
+                <h3>Juan José Mora Chamber of Commerce</h3>
+                <p>123 Business Avenue</p>
+                <p>Juan José Mora, Carabobo, Venezuela</p>
+                <p>info@camarajjmora.org</p>
+                <p>(+58) 424-123-4567</p>
+            </div>
+            
+            <!-- Social media icons -->
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook" class="social-icon">
+                    <img src="images/facebook.svg" alt="Facebook" width="50" height="50">
+                </a>
+                <a href="#" aria-label="Twitter" class="social-icon">
+                    <img src="images/twitter.svg" alt="Twitter" width="50" height="50">
+                </a>
+                <a href="#" aria-label="LinkedIn" class="social-icon">
+                    <img src="images/linkedin.svg" alt="LinkedIn" width="50" height="50">
+                </a>
+            </div>
+            
+            <!-- Project information -->
+            <div class="footer-info">
+                <p><strong>WDD231 Class Project</strong></p>
+                <p>Jernigam Godenvoy Gonzalez Rivero</p>
+                <p>&copy; <span id="currentYear"></span> Juan José Mora Chamber of Commerce</p>
+                <p>Last Modified: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts/directory.js"></script>
+    <script type="module" src="scripts/discover.js"></script>
+</body>
+</html>
