@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Confirmed | DentalCare+</title>
+    <meta name="description" content="Your appointment request has been received. Thank you for choosing DentalCare+.">
+    <meta name="author" content="Jernigam G. Gonzalez R.">
+    
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>DentalCare<span class="plus">+</span></h1>
+            </div>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="confirmation-page">
+            <div class="confirmation-container">
+                <div class="success-icon">✓</div>
+                <h2>Appointment Request Received!</h2>
+                <p class="confirmation-message">Thank you for choosing DentalCare+. We have received your appointment request and will contact you shortly to confirm your appointment.</p>
+
+                <!-- Requirement: Form Action Page - Display URLSearchParams data -->
+                <div class="appointment-details" id="appointment-details">
+                    <h3>Your Appointment Details:</h3>
+                    <div id="details-content">
+                        <!-- Details will be populated via JavaScript using URLSearchParams -->
+                    </div>
+                </div>
+
+                <div class="next-steps">
+                    <h3>What Happens Next?</h3>
+                    <ol>
+                        <li>Our team will review your appointment request within 24 hours</li>
+                        <li>You will receive a confirmation call or email to verify your appointment</li>
+                        <li>If you're a new patient, we'll send you intake forms to complete before your visit</li>
+                        <li>We'll send you a reminder 24 hours before your appointment</li>
+                    </ol>
+                </div>
+
+                <div class="confirmation-actions">
+                    <a href="index.html" class="cta-button">Return to Home</a>
+                    <a href="services.html" class="link-button">Browse Our Services</a>
+                </div>
+
+                <div class="emergency-note">
+                    <p><strong>Need immediate assistance?</strong> For dental emergencies, please call our emergency line at <a href="tel:+15559998888">(555) 999-8888</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>DentalCare+</h3>
+                <p>123 Dental Street<br>
+                Healthcare City, HC 12345<br>
+                Phone: (555) 123-4567<br>
+                Email: info@dentalcareplus.com</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Office Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                Saturday: 9:00 AM - 3:00 PM<br>
+                Sunday: Closed</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DentalCare+. All rights reserved. | Your Name Here</p>
+            <p><a href="https://youtu.be/your-video-id" target="_blank">📹 View Project Demo Video</a></p>
+        </div>
+    </footer>
+
+    <!-- Requirement: URLSearchParams - Extract and display form data -->
+    <script type="module">
+        /* Requirement: URLSearchParams - Parse URL query string and display form data */
+        
+        // Get the query string from the URL
+        const params = new URLSearchParams(window.location.search);
+        
+        // Select the container where we'll display the details
+        const detailsContent = document.querySelector('#details-content');
+        
+        // Check if we have form data
+        if (params.toString()) {
+            // Create a formatted display of the appointment details
+            const details = `
+                <div class="detail-item">
+                    <strong>Name:</strong> ${params.get('fullName') || 'Not provided'}
+                </div>
+                <div class="detail-item">
+                    <strong>Email:</strong> ${params.get('email') || 'Not provided'}
+                </div>
+                <div class="detail-item">
+                    <strong>Phone:</strong> ${params.get('phone') || 'Not provided'}
+                </div>
+                <div class="detail-item">
+                    <strong>Preferred Date:</strong> ${params.get('appointmentDate') || 'Not provided'}
+                </div>
+                <div class="detail-item">
+                    <strong>Preferred Time:</strong> ${params.get('appointmentTime') || 'Not provided'}
+                </div>
+                <div class="detail-item">
+                    <strong>Service Requested:</strong> ${params.get('serviceType') || 'Not provided'}
+                </div>
+                <div class="detail-item">
+                    <strong>New Patient:</strong> ${params.get('newPatient') === 'yes' ? 'Yes' : 'No'}
+                </div>
+                <div class="detail-item">
+                    <strong>Has Insurance:</strong> ${params.get('insurance') === 'yes' ? 'Yes' : 'No'}
+                </div>
+                ${params.get('comments') ? `
+                    <div class="detail-item">
+                        <strong>Additional Comments:</strong> ${params.get('comments')}
+                    </div>
+                ` : ''}
+            `;
+            
+            detailsContent.innerHTML = details;
+        } else {
+            detailsContent.innerHTML = '<p class="error">No appointment details found. Please <a href="contact.html">submit a new appointment request</a>.</p>';
+        }
+
+        // Also handle the hamburger menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', () => {
+                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isExpanded);
+                mainNav.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

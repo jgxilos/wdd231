@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Schedule Your Appointment at DentalCare+</title>
+    <meta name="description"
+        content="Contact DentalCare+ to schedule your dental appointment. Conveniently located with flexible hours. We're here to answer your questions and provide exceptional dental care.">
+    <meta name="author" content="Jernigam G. Gonzalez R.">
+
+    <!-- Requirement: Social Sharing Optimization -->
+    <meta property="og:title" content="Contact DentalCare+ | Book Your Appointment">
+    <meta property="og:description"
+        content="Get in touch with our dental professionals. Easy online appointment scheduling available.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/finalproject/contact.html">
+    <meta property="og:image" content="https://yourusername.github.io/wdd231/finalproject/images/contact-og.jpg">
+
+    <!-- Requirement: Branding with Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Requirement: CSS Standards - External stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Requirement: HTML Standards - Semantic HTML structure -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>DentalCare<span class="plus">+</span></h1>
+            </div>
+
+            <!-- Requirement: Responsive Navigation - Hamburger menu -->
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Requirement: Wayfinding - Active page indicator -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header Section with Parallax -->
+        <section class="page-header parallax-banner">
+            <div class="parallax-overlay"></div>
+            <div class="header-content">
+                <h2>Get In Touch With Us</h2>
+                <p>We're here to help you achieve your healthiest, most beautiful smile</p>
+            </div>
+        </section>
+
+        <!-- Contact Introduction -->
+        <section class="contact-introduction">
+            <div class="intro-wrapper">
+                <h3>Schedule Your Visit Today</h3>
+                <p>Whether you're a new patient or returning for care, we make it easy to schedule your appointment.
+                    Fill out the form below or call us directly. We'll confirm your appointment within 24 hours.</p>
+                <div class="quick-contact-options">
+                    <div class="quick-option">
+                        <span class="option-icon"><i class="fas fa-phone"></i></span>
+                        <strong>Call Us</strong>
+                        <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+                    </div>
+                    <div class="quick-option">
+                        <span class="option-icon"><i class="fas fa-envelope"></i></span>
+                        <strong>Email Us</strong>
+                        <p><a href="mailto:info@dentalcareplus.com">info@dentalcareplus.com</a></p>
+                    </div>
+                    <div class="quick-option">
+                        <span class="option-icon"><i class="fas fa-exclamation-triangle"></i></span>
+                        <strong>Emergency?</strong>
+                        <p><a href="tel:+15559998888">(555) 999-8888</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Contact Container -->
+        <div class="contact-container">
+            <!-- Appointment Form Section -->
+            <section class="appointment-form">
+                <h3>Request an Appointment</h3>
+                <p class="form-description">Complete the form below and we'll contact you to confirm your appointment.
+                    All fields marked with * are required.</p>
+
+                <!-- Requirement: HTML Form with proper validation -->
+                <!-- Requirement: Form Action Page - Displays data via URLSearchParams -->
+                <form action="thankyou.html" method="get" id="appointment-form" novalidate>
+
+                    <!-- Personal Information -->
+                    <fieldset>
+                        <legend>Personal Information</legend>
+
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" name="fullName" required minlength="2" maxlength="100"
+                                placeholder="John Doe" aria-required="true" autocomplete="name">
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john.doe@example.com"
+                                aria-required="true" autocomplete="email">
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                placeholder="555-123-4567" aria-required="true" autocomplete="tel">
+                            <small>Format: 555-123-4567</small>
+                            <span class="error-message" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dateOfBirth" max="2024-12-31" autocomplete="bday">
+                            <small>Optional - helps us provide age-appropriate care</small>
+                        </div>
+                    </fieldset>
+
+                    <!-- Appointment Details -->
+                    <fieldset>
+                        <legend>Appointment Details</legend>
+
+                        <div class="form-group">
+                            <label for="appointment-date">Preferred Date *</label>
+                            <input type="date" id="appointment-date" name="appointmentDate" required min=""
+                                aria-required="true">
+                            <small>Please select a date at least 2 days in advance</small>
+                            <span class="error-message" id="date-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="appointment-time">Preferred Time *</label>
+                            <select id="appointment-time" name="appointmentTime" required aria-required="true">
+                                <option value="">-- Select a time --</option>
+                                <optgroup label="Morning">
+                                    <option value="8:00 AM">8:00 AM</option>
+                                    <option value="8:30 AM">8:30 AM</option>
+                                    <option value="9:00 AM">9:00 AM</option>
+                                    <option value="9:30 AM">9:30 AM</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="10:30 AM">10:30 AM</option>
+                                    <option value="11:00 AM">11:00 AM</option>
+                                    <option value="11:30 AM">11:30 AM</option>
+                                </optgroup>
+                                <optgroup label="Afternoon">
+                                    <option value="1:00 PM">1:00 PM</option>
+                                    <option value="1:30 PM">1:30 PM</option>
+                                    <option value="2:00 PM">2:00 PM</option>
+                                    <option value="2:30 PM">2:30 PM</option>
+                                    <option value="3:00 PM">3:00 PM</option>
+                                    <option value="3:30 PM">3:30 PM</option>
+                                    <option value="4:00 PM">4:00 PM</option>
+                                    <option value="4:30 PM">4:30 PM</option>
+                                    <option value="5:00 PM">5:00 PM</option>
+                                    <option value="5:30 PM">5:30 PM</option>
+                                </optgroup>
+                            </select>
+                            <span class="error-message" id="time-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service-type">Service Needed *</label>
+                            <select id="service-type" name="serviceType" required aria-required="true">
+                                <option value="">-- Select a service --</option>
+                                <optgroup label="General Dentistry">
+                                    <option value="Routine Cleaning">Routine Cleaning & Exam</option>
+                                    <option value="Dental Exam">Comprehensive Dental Exam</option>
+                                    <option value="Filling">Dental Filling</option>
+                                    <option value="Crown">Dental Crown</option>
+                                    <option value="Root Canal">Root Canal Therapy</option>
+                                </optgroup>
+                                <optgroup label="Cosmetic Dentistry">
+                                    <option value="Teeth Whitening">Teeth Whitening</option>
+                                    <option value="Veneers">Dental Veneers</option>
+                                    <option value="Bonding">Dental Bonding</option>
+                                    <option value="Smile Makeover">Smile Makeover Consultation</option>
+                                </optgroup>
+                                <optgroup label="Orthodontics">
+                                    <option value="Braces Consultation">Braces Consultation</option>
+                                    <option value="Invisalign">Invisalign Consultation</option>
+                                </optgroup>
+                                <optgroup label="Surgical">
+                                    <option value="Extraction">Tooth Extraction</option>
+                                    <option value="Wisdom Teeth">Wisdom Teeth Removal</option>
+                                    <option value="Implants">Dental Implants Consultation</option>
+                                </optgroup>
+                                <optgroup label="Other">
+                                    <option value="Emergency">Emergency Visit</option>
+                                    <option value="Second Opinion">Second Opinion</option>
+                                    <option value="Other">Other (explain in comments)</option>
+                                </optgroup>
+                            </select>
+                            <span class="error-message" id="service-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferred-dentist">Preferred Dentist (Optional)</label>
+                            <select id="preferred-dentist" name="preferredDentist">
+                                <option value="">No Preference</option>
+                                <option value="Dr. Sarah Johnson">Dr. Sarah Johnson (General Dentistry)</option>
+                                <option value="Dr. Michael Chen">Dr. Michael Chen (Orthodontics)</option>
+                                <option value="Dr. Emily Rodriguez">Dr. Emily Rodriguez (Pediatric)</option>
+                                <option value="Dr. James Williams">Dr. James Williams (Oral Surgery)</option>
+                                <option value="Dr. Lisa Thompson">Dr. Lisa Thompson (Cosmetic)</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <!-- Patient Status & Insurance -->
+                    <fieldset>
+                        <legend>Patient Status & Insurance</legend>
+
+                        <div class="form-group">
+                            <label>Are you a new patient? *</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="newPatient" value="yes" required>
+                                    Yes, this is my first visit
+                                </label>
+                                <label>
+                                    <input type="radio" name="newPatient" value="no">
+                                    No, I'm an existing patient
+                                </label>
+                            </div>
+                            <span class="error-message" id="patient-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Do you have dental insurance?</label>
+                            <div class="radio-group">
+                                <label>
+                                    <input type="radio" name="insurance" value="yes" id="insurance-yes">
+                                    Yes
+                                </label>
+                                <label>
+                                    <input type="radio" name="insurance" value="no" id="insurance-no">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="insurance-details" style="display: none;">
+                            <label for="insurance-provider">Insurance Provider</label>
+                            <input type="text" id="insurance-provider" name="insuranceProvider"
+                                placeholder="e.g., Delta Dental, Cigna, MetLife">
+                        </div>
+                    </fieldset>
+
+                    <!-- Additional Information -->
+                    <fieldset>
+                        <legend>Additional Information</legend>
+
+                        <div class="form-group">
+                            <label for="reason">Reason for Visit</label>
+                            <textarea id="reason" name="reason" rows="3"
+                                placeholder="Briefly describe what brings you in today..." maxlength="300"></textarea>
+                            <small><span id="reason-count">0</span>/300 characters</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comments">Additional Comments or Questions</label>
+                            <textarea id="comments" name="comments" rows="4"
+                                placeholder="Any special needs, concerns, or questions we should know about?"
+                                maxlength="500"></textarea>
+                            <small><span id="comments-count">0</span>/500 characters</small>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="reminders" value="yes" checked>
+                                Send me appointment reminders via email/SMS
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="newsletter" value="yes">
+                                Subscribe to our newsletter for dental health tips and special offers
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Privacy Agreement -->
+                    <fieldset>
+                        <legend>Privacy & Consent</legend>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="privacy" id="privacy-check" required>
+                                I agree to the <a href="#" target="_blank">privacy policy</a> and consent to be
+                                contacted regarding my appointment *
+                            </label>
+                            <span class="error-message" id="privacy-error"></span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" name="hipaa" id="hipaa-check" required>
+                                I acknowledge that I have received and understand the <a href="#" target="_blank">HIPAA
+                                    Notice of Privacy Practices</a> *
+                            </label>
+                            <span class="error-message" id="hipaa-error"></span>
+                        </div>
+                    </fieldset>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="cta-button">Submit Appointment Request</button>
+                        <button type="reset" class="link-button">Clear Form</button>
+                    </div>
+
+                    <p class="form-note"><small>* Required fields. Your information is kept confidential and
+                            secure.</small></p>
+                </form>
+            </section>
+
+            <!-- Contact Information Section -->
+            <section class="contact-info">
+                <h3>Visit Our Office</h3>
+
+                <div class="info-block">
+                    <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
+                    <p>DentalCare+ Clinic<br>
+                        123 Dental Street, Suite 100<br>
+                        Healthcare City, HC 12345<br>
+                        United States</p>
+                </div>
+
+                <div class="info-block">
+                    <h4><i class="fas fa-phone"></i> Contact Numbers</h4>
+                    <p><strong>Main Office:</strong> <a href="tel:+15551234567">(555) 123-4567</a><br>
+                        <strong>Emergency Line:</strong> <a href="tel:+15559998888">(555) 999-8888</a><br>
+                        <strong>Fax:</strong> (555) 123-4568
+                    </p>
+                </div>
+
+                <div class="info-block">
+                    <h4><i class="fas fa-envelope"></i> Email</h4>
+                    <p><strong>General Inquiries:</strong><br>
+                        <a href="mailto:info@dentalcareplus.com">info@dentalcareplus.com</a>
+                    </p>
+                    <p><strong>New Patients:</strong><br>
+                        <a href="mailto:newpatients@dentalcareplus.com">newpatients@dentalcareplus.com</a>
+                    </p>
+                </div>
+
+                <div class="info-block">
+                    <h4><i class="fas fa-clock"></i> Office Hours</h4>
+                    <table class="hours-table">
+                        <tr>
+                            <td><strong>Monday - Thursday:</strong></td>
+                            <td>8:00 AM - 6:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Friday:</strong></td>
+                            <td>8:00 AM - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Saturday:</strong></td>
+                            <td>9:00 AM - 3:00 PM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sunday:</strong></td>
+                            <td>Closed</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="info-block">
+                    <h4><i class="fas fa-car"></i> Parking & Accessibility</h4>
+                    <p>Free parking available in our lot. Wheelchair accessible entrance and facilities. Ground floor
+                        office with elevator access.</p>
+                </div>
+
+                <div class="info-block">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Dental Emergencies</h4>
+                    <p>If you're experiencing a dental emergency outside of business hours, please call our emergency
+                        line at <a href="tel:+15559998888">(555) 999-8888</a>. We provide same-day emergency
+                        appointments whenever possible.</p>
+                </div>
+
+                <!-- Map Section -->
+                <div class="map-container">
+                    <h4><i class="fas fa-map-marked-alt"></i> Find Us on the Map</h4>
+                    <!-- Requirement: Images - Optimized loading -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412648750455!2d-73.98731668459395!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="DentalCare+ Office Location Map">
+                    </iframe>
+                    <p class="map-note"><small>Click map for directions</small></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- What to Expect Section -->
+        <section class="what-to-expect">
+            <h3>What to Expect at Your First Visit</h3>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4>Check-In</h4>
+                    <p>Arrive 15 minutes early to complete paperwork. Bring your insurance card and ID.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h4>Consultation</h4>
+                    <p>Meet with your dentist to discuss your dental history and concerns.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h4>Examination</h4>
+                    <p>Comprehensive exam including X-rays and oral health assessment.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h4>Treatment Plan</h4>
+                    <p>Receive a personalized treatment plan with cost estimates.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Requirement: HTML Standards - Semantic footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>DentalCare+</h3>
+                <p>123 Dental Street<br>
+                    Healthcare City, HC 12345<br>
+                    Phone: <a href="tel:+15551234567">(555) 123-4567</a><br>
+                    Emergency: <a href="tel:+15559998888">(555) 999-8888</a><br>
+                    Email: <a href="mailto:info@dentalcareplus.com">info@dentalcareplus.com</a></p>
+            </div>
+            <div class="footer-hours">
+                <h3>Office Hours</h3>
+                <p><strong>Mon-Thu:</strong> 8:00 AM - 6:00 PM<br>
+                    <strong>Friday:</strong> 8:00 AM - 5:00 PM<br>
+                    <strong>Saturday:</strong> 9:00 AM - 3:00 PM<br>
+                    <strong>Sunday:</strong> Closed
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+                <h3 style="margin-top: 1rem;">Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DentalCare+. All rights reserved. | Your Name Here</p>
+            <!-- Requirement: Video Demonstration Link -->
+            <p><a href="https://youtu.be/your-video-id" target="_blank" rel="noopener">📹 View Project Demo Video</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Requirement: ES Modules - JavaScript with type="module" -->
+    <!-- Requirement: Local Storage - Form preferences saved -->
+    <script type="module" src="js/main.mjs"></script>
+</body>
+
+</html>

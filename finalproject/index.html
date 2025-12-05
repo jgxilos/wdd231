@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Requirement: SEO-Friendly Descriptions & Semantic HTML Titles -->
+    <title>DentalCare+ | Professional Dental Services for Your Family</title>
+    <meta name="description"
+        content="DentalCare+ offers comprehensive dental care including cleanings, orthodontics, implants, and cosmetic dentistry. Book your appointment today for quality dental services.">
+    <meta name="author" content="Jernigam G. Gonzalez R.">
+
+    <!-- Requirement: Social Sharing Optimization - Open Graph tags -->
+    <meta property="og:title" content="DentalCare+ | Professional Dental Services">
+    <meta property="og:description"
+        content="Comprehensive dental care with experienced professionals. Quality service for your smile.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jgxilos.github.io/wdd231/finalproject/">
+    <meta property="og:image" content="https://jgxilos.github.io/wdd231/finalproject/images/hero.jpg">
+
+<!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Requirement: CSS Standards - External stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Requirement: HTML Standards - Semantic HTML with header, nav, main, footer -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>DentalCare<span class="plus">+</span></h1>
+            </div>
+
+            <!-- Requirement: Responsive Navigation - Hamburger for small screens -->
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Requirement: Wayfinding - Navigation with active state -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Parallax -->
+        <section class="hero parallax-banner">
+            <div class="parallax-overlay"></div>
+            <div class="hero-content">
+                <h2>Your Smile, Our Priority</h2>
+                <p>Experience exceptional dental care with state-of-the-art technology and compassionate professionals.
+                </p>
+                <a href="contact.html" class="cta-button">Book Appointment</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about">
+            <h2>Why Choose DentalCare+?</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="icon"><i class="fas fa-tooth"></i></div>
+                    <h3>Expert Care</h3>
+                    <p>Our team of experienced dentists provides top-quality treatment using the latest techniques.</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <h3>Flexible Hours</h3>
+                    <p>We offer convenient appointment times to fit your busy schedule, including evenings and weekends.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <div class="icon"><i class="fas fa-hospital"></i></div>
+                    <h3>Modern Facility</h3>
+                    <p>State-of-the-art equipment and comfortable environment ensure the best patient experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Services Section -->
+        <section class="featured-services">
+            <h2>Our Services</h2>
+            <p class="section-intro">From routine cleanings to advanced cosmetic procedures, we offer comprehensive
+                dental care.</p>
+            <div class="services-preview" id="services-preview">
+                <!-- Requirement: Dynamic Content Generation - Will be populated via JavaScript -->
+                <p class="loading">Loading services...</p>
+            </div>
+            <a href="services.html" class="link-button">View All Services →</a>
+        </section>
+
+        <!-- Our Team Section -->
+        <section class="team">
+            <h2>Meet Our Dental Professionals</h2>
+            <div class="team-grid" id="team-grid">
+                <!-- Requirement: Displayed Data - 15+ items with 4+ properties from JSON -->
+                <!-- Requirement: Data Fetching - Fetch API with async/await -->
+                <p class="loading">Loading team members...</p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>What Our Patients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="quote">"The best dental experience I've ever had! The staff is incredibly professional and
+                        caring."</p>
+                    <p class="author">— Sarah Johnson</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Finally found a dentist I can trust. They took time to explain every procedure and
+                        made me feel comfortable."</p>
+                    <p class="author">— Michael Chen</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="contact-cta">
+            <h2>Ready to Schedule Your Visit?</h2>
+            <p>Our friendly team is here to help you achieve your best smile.</p>
+            <a href="contact.html" class="cta-button">Contact Us Today</a>
+        </section>
+    </main>
+
+    <!-- Requirement: Modal Dialog - For team member details -->
+    <dialog id="team-modal" class="centered-modal">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <div id="modal-content">
+                <!-- Content will be dynamically inserted -->
+            </div>
+        </div>
+    </dialog>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>DentalCare+</h3>
+                <p>123 Dental Street<br>
+                    Healthcare City, HC 12345<br>
+                    Phone: (555) 123-4567<br>
+                    Email: info@dentalcareplus.com</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Office Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>
+                    Saturday: 9:00 AM - 3:00 PM<br>
+                    Sunday: Closed</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="siteplan.html">Site Plan</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DentalCare+. All rights reserved. | Jernigam G, Gonzalez R.</p>
+            <!-- Requirement: Video Demonstration Link -->
+            <p><a href="https://youtu.be/your-video-id" target="_blank">📹 View Project Demo Video</a></p>
+        </div>
+    </footer>
+
+    <!-- Requirement: ES Modules - type="module" for JavaScript -->
+    <script type="module" src="js/main.mjs"></script>
+</body>
+
+</html>

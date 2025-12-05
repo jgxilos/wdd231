@@ -1,0 +1,303 @@
+{
+  "dentists": [
+    {
+      "id": 1,
+      "name": "Dr. Sarah Johnson",
+      "specialty": "General Dentistry",
+      "experience": "15 years",
+      "education": "DDS, University of California",
+      "bio": "Dr. Johnson is passionate about preventive care and helping patients maintain healthy smiles. She specializes in comprehensive dental examinations and restorative procedures.",
+      "imageUrl": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Michael Chen",
+      "specialty": "Orthodontics",
+      "experience": "12 years",
+      "education": "DMD, Harvard School of Dental Medicine",
+      "bio": "Dr. Chen is an expert in creating beautiful, straight smiles using the latest orthodontic techniques including Invisalign and traditional braces.",
+      "imageUrl": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "Dr. Emily Rodriguez",
+      "specialty": "Pediatric Dentistry",
+      "experience": "10 years",
+      "education": "DDS, NYU College of Dentistry",
+      "bio": "Dr. Rodriguez specializes in making dental visits fun and comfortable for children. She focuses on preventive care and building positive dental experiences.",
+      "imageUrl": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "Dr. James Williams",
+      "specialty": "Oral Surgery",
+      "experience": "18 years",
+      "education": "DDS, MD, Johns Hopkins University",
+      "bio": "Dr. Williams performs complex oral surgeries including extractions, dental implants, and jaw surgery with precision and care.",
+      "imageUrl": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Lisa Thompson",
+      "specialty": "Cosmetic Dentistry",
+      "experience": "14 years",
+      "education": "DDS, Columbia University",
+      "bio": "Dr. Thompson is dedicated to creating stunning smile makeovers through veneers, whitening, and other cosmetic procedures.",
+      "imageUrl": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Robert Martinez",
+      "specialty": "Endodontics",
+      "experience": "16 years",
+      "education": "DDS, University of Michigan",
+      "bio": "Dr. Martinez specializes in root canal therapy and treating dental pain. His gentle approach ensures patient comfort during procedures.",
+      "imageUrl": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 7,
+      "name": "Dr. Amanda Lee",
+      "specialty": "Periodontics",
+      "experience": "11 years",
+      "education": "DDS, University of Pennsylvania",
+      "bio": "Dr. Lee focuses on the prevention, diagnosis, and treatment of gum disease, helping patients maintain healthy gums for life.",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 8,
+      "name": "Dr. David Kim",
+      "specialty": "Prosthodontics",
+      "experience": "13 years",
+      "education": "DDS, University of Southern California",
+      "bio": "Dr. Kim specializes in dental prosthetics including crowns, bridges, dentures, and implant restorations.",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 9,
+      "name": "Dr. Jennifer Garcia",
+      "specialty": "General Dentistry",
+      "experience": "9 years",
+      "education": "DDS, University of Florida",
+      "bio": "Dr. Garcia provides comprehensive dental care with a focus on patient education and preventive dentistry.",
+      "imageUrl": "https://images.unsplash.com/photo-1587613991119-fbbe8e90531d?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 10,
+      "name": "Dr. Thomas Anderson",
+      "specialty": "Oral Pathology",
+      "experience": "17 years",
+      "education": "DDS, PhD, University of Washington",
+      "bio": "Dr. Anderson diagnoses and treats diseases affecting the oral and maxillofacial regions, including oral cancer screening.",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 11,
+      "name": "Dr. Maria Hernandez",
+      "specialty": "Dental Anesthesiology",
+      "experience": "8 years",
+      "education": "DDS, University of Illinois",
+      "bio": "Dr. Hernandez ensures patient comfort through expert pain management and sedation dentistry techniques.",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 12,
+      "name": "Dr. Christopher Taylor",
+      "specialty": "TMJ Specialist",
+      "experience": "12 years",
+      "education": "DDS, Tufts University",
+      "bio": "Dr. Taylor specializes in treating temporomandibular joint disorders and facial pain conditions.",
+      "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 13,
+      "name": "Dr. Nicole White",
+      "specialty": "Implantology",
+      "experience": "10 years",
+      "education": "DDS, Boston University",
+      "bio": "Dr. White is an expert in dental implant placement and restoration, helping patients restore their smiles permanently.",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 14,
+      "name": "Dr. Daniel Brown",
+      "specialty": "Geriatric Dentistry",
+      "experience": "14 years",
+      "education": "DDS, University of Iowa",
+      "bio": "Dr. Brown specializes in dental care for older adults, addressing the unique oral health needs of senior patients.",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+    },
+    {
+      "id": 15,
+      "name": "Dr. Rachel Green",
+      "specialty": "Special Needs Dentistry",
+      "experience": "11 years",
+      "education": "DDS, University of Texas",
+      "bio": "Dr. Green provides compassionate dental care for patients with physical, intellectual, or medical disabilities.",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop"
+    }
+  ],
+  "services": [
+    {
+      "id": 101,
+      "name": "Routine Dental Cleaning",
+      "category": "general",
+      "price": "$85 - $150",
+      "duration": "45-60 minutes",
+      "description": "Professional teeth cleaning to remove plaque and tartar buildup. Includes polishing and fluoride treatment. Essential for maintaining oral health and preventing gum disease.",
+      "icon": "🔁"
+    },
+    {
+      "id": 102,
+      "name": "Comprehensive Dental Exam",
+      "category": "general",
+      "price": "$75 - $200",
+      "duration": "30-45 minutes",
+      "description": "Thorough examination of teeth, gums, and oral tissues. Includes X-rays, oral cancer screening, and personalized treatment planning.",
+      "icon": "🔍"
+    },
+    {
+      "id": 103,
+      "name": "Teeth Whitening",
+      "category": "cosmetic",
+      "price": "$300 - $650",
+      "duration": "60-90 minutes",
+      "description": "Professional whitening treatment to brighten your smile by several shades. Safe, effective, and provides long-lasting results.",
+      "icon": "✨"
+    },
+    {
+      "id": 104,
+      "name": "Dental Veneers",
+      "category": "cosmetic",
+      "price": "$800 - $2,500 per tooth",
+      "duration": "2-3 appointments",
+      "description": "Custom-made porcelain shells that cover the front surface of teeth to improve appearance. Perfect for correcting chips, gaps, or discoloration.",
+      "icon": "💎"
+    },
+    {
+      "id": 105,
+      "name": "Traditional Braces",
+      "category": "orthodontics",
+      "price": "$3,000 - $7,000",
+      "duration": "18-36 months",
+      "description": "Metal or ceramic braces to straighten teeth and correct bite issues. Includes regular adjustments and monitoring throughout treatment.",
+      "icon": "🔗"
+    },
+    {
+      "id": 106,
+      "name": "Invisalign Clear Aligners",
+      "category": "orthodontics",
+      "price": "$3,500 - $8,000",
+      "duration": "12-24 months",
+      "description": "Virtually invisible aligners that gradually straighten teeth. Removable for eating and cleaning, offering convenience and aesthetics.",
+      "icon": "💢"
+    },
+    {
+      "id": 107,
+      "name": "Dental Crowns",
+      "category": "general",
+      "price": "$800 - $3,000",
+      "duration": "2 appointments",
+      "description": "Custom-fitted caps that cover damaged teeth to restore strength, function, and appearance. Available in porcelain, ceramic, or metal.",
+      "icon": "👑"
+    },
+    {
+      "id": 108,
+      "name": "Root Canal Therapy",
+      "category": "general",
+      "price": "$700 - $1,500",
+      "duration": "60-90 minutes",
+      "description": "Treatment to save an infected or damaged tooth by removing the pulp and sealing the root canal. Relieves pain and preserves the tooth.",
+      "icon": "⏬"
+    },
+    {
+      "id": 109,
+      "name": "Dental Implants",
+      "category": "surgical",
+      "price": "$1,500 - $6,000",
+      "duration": "3-6 months process",
+      "description": "Permanent tooth replacement solution using titanium posts surgically placed in the jawbone. Looks, feels, and functions like natural teeth.",
+      "icon": "🔧"
+    },
+    {
+      "id": 110,
+      "name": "Wisdom Teeth Extraction",
+      "category": "surgical",
+      "price": "$200 - $600 per tooth",
+      "duration": "45-90 minutes",
+      "description": "Removal of problematic wisdom teeth to prevent pain, infection, or crowding. Performed under local or general anesthesia.",
+      "icon": "🦷"
+    },
+    {
+      "id": 111,
+      "name": "Dental Bridges",
+      "category": "general",
+      "price": "$1,500 - $5,000",
+      "duration": "2-3 appointments",
+      "description": "Fixed prosthetic device that bridges the gap created by missing teeth. Attached to surrounding natural teeth or implants.",
+      "icon": "🌉"
+    },
+    {
+      "id": 112,
+      "name": "Dentures",
+      "category": "general",
+      "price": "$1,000 - $3,500",
+      "duration": "4-6 weeks",
+      "description": "Removable replacements for missing teeth. Available as partial or complete dentures, custom-fitted for comfort and function.",
+      "icon": "😁"
+    },
+    {
+      "id": 113,
+      "name": "Gum Disease Treatment",
+      "category": "general",
+      "price": "$500 - $4,000",
+      "duration": "Varies",
+      "description": "Treatment for periodontal disease including deep cleaning, scaling, and root planing. Essential for preserving gum and bone health.",
+      "icon": "🦷"
+    },
+    {
+      "id": 114,
+      "name": "Smile Makeover",
+      "category": "cosmetic",
+      "price": "$5,000 - $30,000",
+      "duration": "Multiple appointments",
+      "description": "Comprehensive cosmetic treatment combining multiple procedures to completely transform your smile. Customized to your goals.",
+      "icon": "⭐"
+    },
+    {
+      "id": 115,
+      "name": "Emergency Dental Care",
+      "category": "general",
+      "price": "$150 - $500",
+      "duration": "Immediate",
+      "description": "Prompt treatment for dental emergencies including severe pain, broken teeth, or knocked-out teeth. Available same-day.",
+      "icon": "🚨"
+    },
+    {
+      "id": 116,
+      "name": "Dental Bonding",
+      "category": "cosmetic",
+      "price": "$300 - $600 per tooth",
+      "duration": "30-60 minutes",
+      "description": "Quick cosmetic fix using tooth-colored resin to repair chips, cracks, or gaps. Completed in a single visit.",
+      "icon": "🔨"
+    },
+    {
+      "id": 117,
+      "name": "Tooth Extraction",
+      "category": "surgical",
+      "price": "$150 - $650",
+      "duration": "30-60 minutes",
+      "description": "Safe removal of damaged or decayed teeth that cannot be saved. Performed with local anesthesia for patient comfort.",
+      "icon": "🦷"
+    },
+    {
+      "id": 118,
+      "name": "Pediatric Dental Exam",
+      "category": "general",
+      "price": "$75 - $150",
+      "duration": "30-45 minutes",
+      "description": "Child-friendly dental examination with special attention to growth, development, and prevention. Makes kids comfortable with dental care.",
+      "icon": "👶"
+    }
+  ]
+}
