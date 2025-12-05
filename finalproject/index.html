@@ -18,16 +18,25 @@
     <meta property="og:url" content="https://jgxilos.github.io/wdd231/finalproject/">
     <meta property="og:image" content="https://jgxilos.github.io/wdd231/finalproject/images/hero.jpg">
 
-<!-- Favicon -->
+    <!-- Favicon -->
     <link rel="icon" href="favicon.ico">
 
+    <!-- Google Fonts with preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
     <!-- Requirement: CSS Standards - External stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <!-- Add FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Requirement: HTML Standards - Semantic HTML with header, nav, main, footer -->
     <header>
         <div class="header-container">
@@ -54,7 +63,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section with Parallax -->
         <section class="hero parallax-banner">
             <div class="parallax-overlay"></div>
@@ -98,7 +107,8 @@
                 <!-- Requirement: Dynamic Content Generation - Will be populated via JavaScript -->
                 <p class="loading">Loading services...</p>
             </div>
-            <a href="services.html" class="link-button">View All Services →</a>
+            <!-- FIXED: Button contrast issue - Changed normal state text to dark color -->
+            <a href="services.html" class="link-button view-all-services">View All Services →</a>
         </section>
 
         <!-- Our Team Section -->
@@ -174,14 +184,14 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 DentalCare+. All rights reserved. | Jernigam G, Gonzalez R.</p>
+            <p>&copy; <span id="current-year">2024</span> DentalCare+. All rights reserved. | Jernigam G, Gonzalez R.</p>
             <!-- Requirement: Video Demonstration Link -->
-            <p><a href="https://youtu.be/your-video-id" target="_blank">📹 View Project Demo Video</a></p>
+            <p><a href="https://youtu.be/your-video-id" target="_blank" rel="noopener">📹 View Project Demo Video</a></p>
         </div>
     </footer>
 
     <!-- Requirement: ES Modules - type="module" for JavaScript -->
-    <script type="module" src="js/main.mjs"></script>
+    <script type="module" src="scripts/main.mjs"></script>
 </body>
 
 </html>

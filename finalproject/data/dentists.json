@@ -225,7 +225,7 @@
       "price": "$200 - $600 per tooth",
       "duration": "45-90 minutes",
       "description": "Removal of problematic wisdom teeth to prevent pain, infection, or crowding. Performed under local or general anesthesia.",
-      "icon": "🦷"
+      "icon": "➿"
     },
     {
       "id": 111,
@@ -252,7 +252,7 @@
       "price": "$500 - $4,000",
       "duration": "Varies",
       "description": "Treatment for periodontal disease including deep cleaning, scaling, and root planing. Essential for preserving gum and bone health.",
-      "icon": "🦷"
+      "icon": "✳️"
     },
     {
       "id": 114,
@@ -288,7 +288,7 @@
       "price": "$150 - $650",
       "duration": "30-60 minutes",
       "description": "Safe removal of damaged or decayed teeth that cannot be saved. Performed with local anesthesia for patient comfort.",
-      "icon": "🦷"
+      "icon": "💉"
     },
     {
       "id": 118,

@@ -14,6 +14,7 @@ const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav');
 const servicesPreview = document.querySelector('#services-preview');
 const teamGrid = document.querySelector('#team-grid');
+const currentYearElement = document.querySelector('#current-year');
 
 /* ===== Hamburger Menu Functionality ===== */
 /* Requirement: DOM Manipulation & Event Handling - Menu toggle */
@@ -398,17 +399,12 @@ function validateField(input) {
     return isValid;
 }
 
-/* ===== Footer - Current Year ===== */
-/* Requirement: DOM Manipulation - Dynamic content */
-function updateFooterYear() {
-    const currentYear = new Date().getFullYear();
-    const yearElements = document.querySelectorAll('.footer-bottom p');
-    
-    yearElements.forEach(element => {
-        if (element.textContent.includes('2024')) {
-            element.textContent = element.textContent.replace('2024', currentYear);
-        }
-    });
+/* ===== Update Current Year in Footer ===== */
+function updateCurrentYear() {
+    if (currentYearElement) {
+        const currentYear = new Date().getFullYear();
+        currentYearElement.textContent = currentYear;
+    }
 }
 
 /* ===== Initialize All Features ===== */
@@ -432,8 +428,8 @@ function initialize() {
     // Enhance form validation if form exists
     enhanceFormValidation();
     
-    // Update footer year
-    updateFooterYear();
+    // Update current year in footer
+    updateCurrentYear();
     
     console.log('DentalCare+ initialized successfully');
 }
